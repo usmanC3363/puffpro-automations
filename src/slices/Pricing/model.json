@@ -1,0 +1,74 @@
+{
+  "id": "pricing",
+  "type": "SharedSlice",
+  "name": "Pricing",
+  "description": "Pricing",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "toggle_duration": {
+          "type": "Boolean",
+          "config": {
+            "label": "Toggle Duration",
+            "placeholder_false": "monthly",
+            "placeholder_true": "annually",
+            "default_value": false
+          }
+        },
+        "pricing_data": {
+          "type": "Group",
+          "config": {
+            "label": "Pricing Data",
+            "repeat": true,
+            "fields": {
+              "plan_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan Title",
+                  "placeholder": ""
+                }
+              },
+              "monthly_price": {
+                "type": "Text",
+                "config": {
+                  "label": "Monthly Price",
+                  "placeholder": ""
+                }
+              },
+              "annual_price": {
+                "type": "Text",
+                "config": {
+                  "label": "Annual Price",
+                  "placeholder": ""
+                }
+              },
+              "plan_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan Description",
+                  "placeholder": ""
+                }
+              },
+              "plan_details": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Plan Details",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

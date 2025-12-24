@@ -1,0 +1,57 @@
+{
+  "id": "process",
+  "type": "SharedSlice",
+  "name": "Process",
+  "description": "Process",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "card_data": {
+          "type": "Group",
+          "config": {
+            "label": "Card Data",
+            "repeat": true,
+            "fields": {
+              "order": {
+                "type": "Text",
+                "config": {
+                  "label": "Order",
+                  "placeholder": ""
+                }
+              },
+              "card_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Heading",
+                  "placeholder": ""
+                }
+              },
+              "card_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Card Description",
+                  "placeholder": ""
+                }
+              },
+              "cardimg": {
+                "type": "Image",
+                "config": {
+                  "label": "cardImg",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

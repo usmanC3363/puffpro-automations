@@ -1,0 +1,594 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* app/globals.css or your Tailwind CSS file */
+
+/* Base transition properties for all animated elements */
+
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  color: var(--foreground-color);
+  font-family: "Neue Montreal", sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@layer base {
+  :root {
+    /* --foreground-color: var(--foreground); */
+    --foreground-color: var(--text-primary);
+    --background-start-color: var(--background);
+    --text-primary: #191919;
+    --text-secondary: #2f2f2f;
+    --background: 0 0% 97%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: var(--text-primary);
+    --primary-foreground: 0 0% 98%;
+    --secondary: var(--text-secondary);
+    /* --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%; */
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --foreground-color: var(--text-primary);
+    --background-start-color: var(--background);
+    --text-primary: #f0f0f0;
+    --text-secondary: #dedede;
+    --background: #1f1f1f; /* --background: 206 20% 7%; */
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/*  */
+/* TEXT STYLES */
+/*  */
+
+/* -------------------------
+   DISPLAY (largest)
+   L (>=1024): big hero display
+   M (>=768): medium
+   S (base)
+   ------------------------- */
+.display {
+  /* font-family: var(--font-primary); */
+  font-weight: 700;
+  font-size: 40px; /* S (base/mobile) */
+  line-height: 1.02;
+  letter-spacing: -0.8px;
+  min-width: 0;
+}
+@media (min-width: 768px) {
+  .display {
+    font-size: 64px;
+    letter-spacing: -1.6px;
+    line-height: 1.03;
+  }
+}
+@media (min-width: 1024px) {
+  .display {
+    font-size: 96px;
+    letter-spacing: -2.8px;
+    line-height: 1.02;
+  }
+}
+
+/* -------------------------
+   Heading XL (H1)
+   ------------------------- */
+.heading-xl {
+  /* font-family: var(--font-primary); */
+  font-weight: 600;
+  font-size: 45px; /* S */
+  line-height: 1.05;
+  letter-spacing: -0.6px;
+}
+
+@media (min-width: 768px) {
+  .heading-xl {
+    font-size: 56px;
+    letter-spacing: -1.2px;
+    line-height: 1.08;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-xl {
+    font-size: 70px;
+    letter-spacing: -2.2px;
+    line-height: 1.1;
+  }
+}
+
+/* -------------------------
+   Heading L (H2)
+   ------------------------- */
+.heading-l {
+  /* font-family: var(--font-primary); */
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+}
+@media (min-width: 768px) {
+  .heading-l {
+    font-size: 40px;
+    letter-spacing: -0.9px;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-l {
+    font-size: 50px;
+    letter-spacing: -1.2px;
+  }
+}
+
+/* -------------------------
+   Heading M (H3)
+   ------------------------- */
+.heading-m {
+  /* font-family: var(--font-primary); */
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 1.1em;
+  letter-spacing: -0.04em;
+}
+/* @media (min-width: 768px) {
+  .heading-m {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-m {
+    font-size: 35px;
+  }
+} */
+
+/* -------------------------
+   Heading S (H4)
+   ------------------------- */
+.heading-s {
+  /* font-family: var(--font-primary); */
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.12;
+  letter-spacing: -0.3px;
+}
+@media (min-width: 768px) {
+  .heading-s {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-s {
+    font-size: 26px;
+  }
+}
+
+/* -------------------------
+   Heading XS (H5/H6 small)
+   ------------------------- */
+.heading-xs {
+  /* font-family: var(--font-primary); */
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+@media (min-width: 768px) {
+  .heading-xs {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  .heading-xs {
+    font-size: 20px;
+  }
+}
+
+/* -------------------------
+   Label (smallcaps / UI labels)
+   ------------------------- */
+.label {
+  /* font-family: var(--font-primary); */
+  font-weight: 600;
+  font-size: 12px; /* S */
+  line-height: 1.2;
+  letter-spacing: 0.6px; /* labels often use wider tracking */
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .label {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1024px) {
+  .label {
+    font-size: 14px;
+  }
+}
+
+/* -------------------------
+   Body XXL
+   ------------------------- */
+.body-xxl {
+  /* font-family: var(--font-primary); */
+  font-weight: 500;
+  font-size: 16px; /* S (mobile) */
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: var(--text-secondary);
+}
+@media (min-width: 768px) {
+  .body-xxl {
+    font-size: 16px;
+    /* line-height: 1.45; */
+  }
+}
+@media (min-width: 1024px) {
+  .body-xxl {
+    font-size: 18px;
+    /* line-height: 1.5; */
+  }
+}
+
+/* -------------------------
+   Body XL
+   ------------------------- */
+.body-xl {
+  /* font-family: var(--font-primary); */
+  font-weight: 500;
+  font-size: 16px; /* S (mobile) */
+  line-height: 1.2em;
+  letter-spacing: -0.04em;
+  color: var(--text-secondary);
+}
+/* @media (min-width: 768px) {
+  .body-xl {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+}
+@media (min-width: 1024px) {
+  .body-xl {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+} */
+
+/* -------------------------
+   Body L
+   ------------------------- */
+.body-l {
+  /* font-family: var(--font-primary); */
+  font-weight: 400;
+  font-size: 24px; /* S (mobile) */
+  line-height: 1.45;
+  letter-spacing: 0px;
+  color: var(--text-secondary);
+}
+@media (min-width: 768px) {
+  .body-l {
+    font-size: 28px;
+    line-height: 1.45;
+  }
+}
+@media (min-width: 1024px) {
+  .body-l {
+    font-size: 32px;
+    line-height: 1.5;
+  }
+}
+
+/* -------------------------
+   Body M
+   ------------------------- */
+.body-m {
+  /* font-family: var(--font-primary); */
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.35;
+  letter-spacing: 0px;
+  color: var(--text-secondary);
+}
+@media (min-width: 768px) {
+  .body-m {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .body-m {
+    font-size: 15px;
+  }
+}
+
+/* -------------------------
+   Body S
+   ------------------------- */
+.body-s {
+  /* font-family: var(--font-primary); */
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.25;
+  letter-spacing: 0px;
+  color: var(--text-secondary);
+}
+@media (min-width: 768px) {
+  .body-s {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .body-s {
+    font-size: 13px;
+  }
+}
+
+/* -------------------------
+   Body XS
+   ------------------------- */
+.body-xs {
+  /* font-family: var(--font-primary); */
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  color: var(--text-secondary);
+}
+@media (min-width: 768px) {
+  .body-xs {
+    font-size: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .body-xs {
+    font-size: 11px;
+  }
+}
+
+/* -------------------------
+   Card Title & Card Content
+   Guessed values (practical defaults)
+   ------------------------- */
+.card-title {
+  /* font-family: var(--font-primary); */
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+}
+/* @media (min-width: 768px) {
+  .card-title {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .card-title {
+    font-size: 23px;
+  }
+} */
+
+.card-content {
+  /* font-family: var(--font-primary); */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4em;
+  letter-spacing: -0.02em;
+  color: var(--text-secondary);
+}
+/* @media (min-width: 768px) {
+  .card-content {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .card-content {
+    font-size: 16px;
+  }
+} */
+
+/* -------------------------
+   Utilities: paragraph spacing tokens (if you want them)
+   Use classes like .p-0, .p-sm, .p-md on paragraphs to control spacing
+   ------------------------- */
+.p-0 {
+  margin-bottom: 0;
+}
+.p-sm {
+  margin-bottom: 0.25rem;
+}
+.p-md {
+  margin-bottom: 0.5rem;
+}
+.p-lg {
+  margin-bottom: 1rem;
+}
+
+/*  */
+/* ANIMATION CSS STYLES */
+/*  */
+
+.slider-track {
+  animation: scroll-left 25s linear infinite;
+  display: inline-flex;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-up,
+.slide-in-right,
+.slide-in-left,
+.slide-in-up,
+.slide-in-down,
+.grow-in {
+  @apply transition-all duration-700 ease-in-out;
+}
+
+.expand-height,
+.expand-width {
+  @apply transition-all duration-700 ease-linear;
+}
+
+.fade-up {
+  @apply translate-y-8 opacity-0;
+}
+
+.fade-up.is-inview {
+  @apply translate-y-0 opacity-100;
+}
+
+.slide-in-right {
+  @apply translate-x-12 opacity-0;
+}
+
+.slide-in-right.is-inview {
+  @apply translate-x-0 opacity-100;
+}
+
+.slide-in-left {
+  @apply -translate-x-12 opacity-0;
+}
+
+.slide-in-left.is-inview {
+  @apply translate-x-0 opacity-100;
+}
+
+.slide-in-up {
+  @apply translate-y-16 opacity-0;
+}
+
+.slide-in-up.is-inview {
+  @apply translate-y-0 opacity-100;
+}
+.slide-in-down {
+  @apply -translate-y-16 opacity-0;
+}
+
+.slide-in-down.is-inview {
+  @apply -translate-y-0 opacity-100;
+}
+
+.grow-in {
+  @apply scale-75 opacity-0;
+}
+
+.grow-in.is-inview {
+  @apply scale-100 opacity-100;
+}
+
+.expand-width {
+  @apply w-0 opacity-0;
+  transition-property: width, opacity;
+  transform-origin: "left";
+}
+
+.expand-width.is-inview {
+  @apply w-full opacity-100;
+}
+.expand-height {
+  @apply h-0 opacity-0;
+  transition-property: height, opacity;
+}
+
+.expand-height.is-inview {
+  @apply h-full opacity-100;
+}

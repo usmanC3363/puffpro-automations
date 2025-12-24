@@ -1,0 +1,147 @@
+{
+  "id": "services",
+  "type": "SharedSlice",
+  "name": "Services",
+  "description": "Services",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "services_data": {
+          "type": "Group",
+          "config": {
+            "label": "Services Data",
+            "repeat": true,
+            "fields": {
+              "iscardonleft": {
+                "type": "Boolean",
+                "config": {
+                  "label": "isCardonLeft",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              },
+              "card_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Card Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "service_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Label",
+                  "placeholder": ""
+                }
+              },
+              "service_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Title",
+                  "placeholder": ""
+                }
+              },
+              "service_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Description",
+                  "placeholder": ""
+                }
+              },
+              "service_tag": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Tag",
+                  "placeholder": ""
+                }
+              },
+              "service_tag2": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Tag2",
+                  "placeholder": ""
+                }
+              },
+              "service_tag3": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Tag3",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "serviceSelf",
+      "name": "ServiceSelf",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "services_data": {
+          "type": "Group",
+          "config": {
+            "label": "Services Data",
+            "repeat": true,
+            "fields": {
+              "iscardonleft": {
+                "type": "Boolean",
+                "config": {
+                  "label": "isCardonLeft",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              },
+              "service_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Label",
+                  "placeholder": ""
+                }
+              },
+              "service_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Title",
+                  "placeholder": ""
+                }
+              },
+              "service_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Service Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "service_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Service Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

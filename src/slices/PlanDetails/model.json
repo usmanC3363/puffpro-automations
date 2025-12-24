@@ -1,0 +1,53 @@
+{
+  "id": "plan_details",
+  "type": "SharedSlice",
+  "name": "PlanDetails",
+  "description": "PlanDetails",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "features": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Features",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "plan_details": {
+          "type": "Group",
+          "config": {
+            "label": "Plan Details",
+            "repeat": true,
+            "fields": {
+              "plan_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan Title",
+                  "placeholder": ""
+                }
+              },
+              "plan_details": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Plan Details",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

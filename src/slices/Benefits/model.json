@@ -1,0 +1,50 @@
+{
+  "id": "benefits",
+  "type": "SharedSlice",
+  "name": "Benefits",
+  "description": "Benefits",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "benefits_data": {
+          "type": "Group",
+          "config": {
+            "label": "Benefits Data",
+            "repeat": true,
+            "fields": {
+              "benefit_icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Benefit Icon",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "benefit_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Benefit Heading",
+                  "placeholder": ""
+                }
+              },
+              "benefit_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Benefit Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

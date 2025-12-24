@@ -1,0 +1,69 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"pricing_data": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"monthly_price",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "motor",
+									"type": "Text"
+								}
+							],
+							[
+								"annual_price",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "poem",
+									"type": "Text"
+								}
+							],
+							[
+								"plan_details",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Lorem cillum laborum ut veniam exercitation. Ullamco mollit dolor anim deserunt est deserunt quis excepteur deserunt magna laboris culpa consectetur. Do qui esse incididunt et pariatur."
+											}
+										}
+									]
+								}
+							],
+							[
+								"plan_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "me",
+									"type": "Text"
+								}
+							],
+							[
+								"plan_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "sweet",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"toggle_duration": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": []
+	}
+]

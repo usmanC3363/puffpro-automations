@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "whenever",
+				"type": "Text"
+			},
+			"section_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "hope",
+				"type": "Text"
+			},
+			"section_description": {
+				"__TYPE__": "FieldContent",
+				"value": "bound",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

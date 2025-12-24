@@ -1,0 +1,279 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"casestudy_data": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"case_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "arrange",
+									"type": "Text"
+								}
+							],
+							[
+								"case_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "choose",
+									"type": "Text"
+								}
+							],
+							[
+								"impact_point_1",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "hungry",
+									"type": "Text"
+								}
+							],
+							[
+								"impact_point_2",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "iron",
+									"type": "Text"
+								}
+							],
+							[
+								"impact_point_3",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "glass",
+									"type": "Text"
+								}
+							],
+							[
+								"impact_point_4",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "greatly",
+									"type": "Text"
+								}
+							],
+							[
+								"case_study_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
+										"width": 3212,
+										"height": 3880
+									},
+									"url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
+									"width": 3212,
+									"height": 3880,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "them",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"brand_logo_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+										"width": 5616,
+										"height": 3744
+									},
+									"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+									"width": 5616,
+									"height": 3744,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "aboard",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"iscardonleft",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "caseStudySelf",
+		"primary": {
+			"casestudy_data": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"iscardonleft",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"case_study_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+										"width": 4010,
+										"height": 4010
+									},
+									"url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+									"width": 4010,
+									"height": 4010,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "local",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"brand_logo_image",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+										"width": 3424,
+										"height": 3424
+									},
+									"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+									"width": 3424,
+									"height": 3424,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "angry",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"case_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "should",
+									"type": "Text"
+								}
+							],
+							[
+								"case_description",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "greatly",
+									"type": "Text"
+								}
+							],
+							[
+								"solution",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Incididunt mollit velit labore incididunt id quis ullamco. Exercitation minim exercitation enim est."
+											}
+										}
+									]
+								}
+							],
+							[
+								"process",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Esse proident qui anim anim tempor in laboris officia sint est laboris commodo non tempor est. Minim id elit irure sit et aliquip."
+											}
+										}
+									]
+								}
+							],
+							[
+								"results",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Quis quis dolore qui ea commodo non reprehenderit ea ut cillum consectetur non. Adipisicing non deserunt occaecat. Sit labore duis dolore voluptate enim non."
+											}
+										}
+									]
+								}
+							],
+							[
+								"testimonial",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Ullamco cupidatat non dolore adipisicing aute. Aliquip culpa ipsum consectetur et commodo tempor."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

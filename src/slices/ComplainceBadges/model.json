@@ -1,0 +1,36 @@
+{
+  "id": "complaince_badges",
+  "type": "SharedSlice",
+  "name": "ComplainceBadges",
+  "description": "ComplainceBadges",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "badges": {
+          "type": "Group",
+          "config": {
+            "label": "Badges",
+            "repeat": true,
+            "fields": {
+              "badge": {
+                "type": "Image",
+                "config": {
+                  "label": "Badge",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

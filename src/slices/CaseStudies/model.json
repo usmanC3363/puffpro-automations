@@ -1,0 +1,190 @@
+{
+  "id": "case_studies",
+  "type": "SharedSlice",
+  "name": "CaseStudies",
+  "description": "CaseStudies",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "casestudy_data": {
+          "type": "Group",
+          "config": {
+            "label": "CaseStudy Data",
+            "repeat": true,
+            "fields": {
+              "iscardonleft": {
+                "type": "Boolean",
+                "config": {
+                  "label": "isCardonLeft",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              },
+              "case_study_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Case Study Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "brand_logo_image": {
+                "type": "Image",
+                "config": {
+                  "label": "brand logo image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "case_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Case Heading",
+                  "placeholder": ""
+                }
+              },
+              "case_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Case Description",
+                  "placeholder": ""
+                }
+              },
+              "impact_point_1": {
+                "type": "Text",
+                "config": {
+                  "label": "Impact Point 1",
+                  "placeholder": ""
+                }
+              },
+              "impact_point_2": {
+                "type": "Text",
+                "config": {
+                  "label": "Impact Point 2",
+                  "placeholder": ""
+                }
+              },
+              "impact_point_3": {
+                "type": "Text",
+                "config": {
+                  "label": "Impact Point 3",
+                  "placeholder": ""
+                }
+              },
+              "impact_point_4": {
+                "type": "Text",
+                "config": {
+                  "label": "Impact Point 4",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "caseStudySelf",
+      "name": "caseStudySelf",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "casestudy_data": {
+          "type": "Group",
+          "config": {
+            "label": "CaseStudy Data",
+            "repeat": true,
+            "fields": {
+              "iscardonleft": {
+                "type": "Boolean",
+                "config": {
+                  "label": "isCardonLeft",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              },
+              "case_study_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Case Study Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "brand_logo_image": {
+                "type": "Image",
+                "config": {
+                  "label": "brand logo image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "case_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Case Heading",
+                  "placeholder": ""
+                }
+              },
+              "case_description": {
+                "type": "Text",
+                "config": {
+                  "label": "Case Description",
+                  "placeholder": ""
+                }
+              },
+              "solution": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Solution",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "process": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Process",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "results": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Results",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "testimonial": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Testimonial",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"cta_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "knew",
+				"type": "Text"
+			},
+			"cta_subheading": {
+				"__TYPE__": "FieldContent",
+				"value": "whom",
+				"type": "Text"
+			},
+			"cta_button": {
+				"__TYPE__": "FieldContent",
+				"value": "scientific",
+				"type": "Text"
+			},
+			"cta_link": {
+				"__TYPE__": "LinkContent",
+				"key": "9c47a1c1-5f89-4500-bda4-4c09ad021728",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "zulu"
+				}
+			}
+		},
+		"items": []
+	}
+]
