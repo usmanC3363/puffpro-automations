@@ -6,6 +6,7 @@ import Bounded from "@/components/helper/Bounded";
 import { Button } from "@/components/ui/button";
 import { GoArrowUpRight } from "react-icons/go";
 import CSSLineReveal from "@/components/helper/CssLineReveal";
+import { Arrow } from "@/components/helper/Arrow";
 
 /**
  * Props for `Hero`.
@@ -20,51 +21,54 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex h-[75vh] w-screen flex-col justify-center"
+      className="flex h-full w-screen flex-col justify-center gap-y-20 py-20"
     >
-      <div className="mx-auto flex w-full max-w-7xl flex-col px-6">
-        {/* Top Text Block */}
-        <div className="flex flex-col items-center text-center">
-          {/* Heading */}
-          <CSSLineReveal textClass="text-[40px] capitalize">
-            {slice.primary.heading_1}
-          </CSSLineReveal>
-          <CSSLineReveal textClass="text-[120px] font-semibold uppercase">
-            {slice.primary.heading_2}
-          </CSSLineReveal>
-        </div>
+      {/* Top Text Block */}
+      <div className="flex flex-col items-center gap-4 text-center">
+        {/* Heading */}
+        <CSSLineReveal textClass="text-[40px] capitalize">
+          {slice.primary.heading_1}
+        </CSSLineReveal>
+        <CSSLineReveal textClass="text-[120px] leading-none font-semibold uppercase">
+          {slice.primary.heading_2}
+        </CSSLineReveal>
+      </div>
 
+      <div className="flex flex-col gap-y-4">
         {/* Divider */}
-        <div className="my-10 h-0.5 w-full bg-white/25" />
+        <div className="my-4 h-px w-full bg-current" />
 
         {/* Bottom Row */}
-        <div className="flex w-full flex-col items-center justify-between gap-8 md:flex-row">
+        <div className="gap-auto grid w-full grid-cols-1 items-center justify-between md:grid-cols-[1fr_1fr]">
           {/* Description */}
-          <CSSLineReveal textClass="max-w-xl text-left body-lg text-white/70">
+          <CSSLineReveal textClass="max-w-lg xl:max-w-[550px] text-left text-[20px] tracking-[0%]  font-light">
             {slice.primary.description}
           </CSSLineReveal>
 
           {/* CTA Buttons */}
-          <div className="flex shrink-0 items-center gap-4">
-            <PrismicNextLink field={slice.primary.cta1_link}>
-              <Button className="flex h-9 items-center gap-1 rounded-sm border border-white/20 px-4">
+          <div className="flex shrink-0 items-center gap-4 justify-self-end">
+            <Button asChild variant="outline" className="shrink-0">
+              <PrismicNextLink field={slice.primary.cta1_link}>
                 <span className="text-sm font-medium">
                   {slice.primary.cta1_label}
                 </span>
-                <GoArrowUpRight className="size-5" />
-              </Button>
-            </PrismicNextLink>
+                <div className="flex h-full w-full !flex-1 !shrink-0 items-center">
+                  <Arrow
+                    svgClass="!flex-1 !shrink-0 h-full w-full"
+                    name="main"
+                  />
+                </div>
+              </PrismicNextLink>
+            </Button>
 
-            <PrismicNextLink field={slice.primary.cta2_link}>
-              <Button
-                variant="outline"
-                className="flex h-9 items-center rounded-sm border border-white/20 px-4"
-              >
+            <Button variant="outline" asChild>
+              <PrismicNextLink field={slice.primary.cta2_link}>
                 <span className="text-sm font-medium">
                   {slice.primary.cta2_label}
                 </span>
-              </Button>
-            </PrismicNextLink>
+                <Arrow svgClass="scale-125" name="bullet" />
+              </PrismicNextLink>
+            </Button>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ export default function HeaderShell({
 
   return (
     <div
-      className={`fixed left-0 top-0 z-50 w-full translate-y-0 transition-all duration-500 ease-in-out ${
+      className={`fixed left-0 top-0 z-50 w-full translate-y-0 border-b border-current transition-all duration-500 ease-in-out ${
         scrollUp ? "bg-mywhite-50/30 backdrop-blur-[8px]" : ""
       }`}
     >

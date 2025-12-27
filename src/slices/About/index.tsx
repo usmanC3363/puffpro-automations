@@ -24,12 +24,6 @@ const About: FC<AboutProps> = ({ slice }) => {
         <div
           className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} flex h-full w-full flex-col gap-y-10`}
         >
-          <h1
-            className={`w-fit text-start text-3xl opacity-70 lg:text-4xl 2xl:text-5xl`}
-            style={{ fontStretch: "200px" }}
-          >
-            About Us
-          </h1>
           <div className="relative h-[25rem] w-full sm:h-full max-lg:max-w-96">
             <PrismicNextImage
               field={slice.primary.about_image}
