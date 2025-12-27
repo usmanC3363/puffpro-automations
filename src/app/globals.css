@@ -41,19 +41,19 @@ body {
 @layer base {
   :root {
     /* --foreground-color: var(--foreground); */
-    --foreground-color: var(--text-primary);
-    --background-start-color: var(--background);
-    --text-primary: #191919;
-    --text-secondary: #2f2f2f;
+    --foreground-color: var(--dark-text-primary);
+    --background-color: var(--background);
+    --dark-text-primary: #191919;
+    --dark-text-secondary: #2f2f2f;
     --background: 0 0% 97%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: var(--text-primary);
     --primary-foreground: 0 0% 98%;
-    --secondary: var(--text-secondary);
+    --primary: var(--dark-text-primary);
+    --secondary: var(--dark-text-secondary);
     /* --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%; */
@@ -76,10 +76,10 @@ body {
   }
   .dark {
     --foreground-color: var(--text-primary);
-    --background-start-color: var(--background);
-    --text-primary: #f0f0f0;
-    --text-secondary: #dedede;
-    --background: #1f1f1f; /* --background: 206 20% 7%; */
+    --background-color: var(--background);
+    --text-primary: #eff3f9;
+    --text-secondary: #c5c5c3;
+    --background: 0 0 0%; /* --background: 206 20% 7%; */
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -271,7 +271,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.6px; /* labels often use wider tracking */
   text-transform: uppercase;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
   margin: 0;
 }
 @media (min-width: 768px) {
@@ -294,7 +294,7 @@ body {
   font-size: 16px; /* S (mobile) */
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
 }
 @media (min-width: 768px) {
   .body-xxl {
@@ -318,7 +318,7 @@ body {
   font-size: 16px; /* S (mobile) */
   line-height: 1.2em;
   letter-spacing: -0.04em;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
 }
 /* @media (min-width: 768px) {
   .body-xl {
@@ -342,7 +342,7 @@ body {
   font-size: 24px; /* S (mobile) */
   line-height: 1.45;
   letter-spacing: 0px;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
 }
 @media (min-width: 768px) {
   .body-l {
@@ -366,7 +366,7 @@ body {
   font-size: 13px;
   line-height: 1.35;
   letter-spacing: 0px;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
 }
 @media (min-width: 768px) {
   .body-m {
@@ -388,7 +388,7 @@ body {
   font-size: 11px;
   line-height: 1.25;
   letter-spacing: 0px;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
 }
 @media (min-width: 768px) {
   .body-s {
@@ -410,7 +410,7 @@ body {
   font-size: 10px;
   line-height: 1.2;
   letter-spacing: 0px;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
 }
 @media (min-width: 768px) {
   .body-xs {
@@ -451,7 +451,7 @@ body {
   font-size: 16px;
   line-height: 1.4em;
   letter-spacing: -0.02em;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
 }
 /* @media (min-width: 768px) {
   .card-content {

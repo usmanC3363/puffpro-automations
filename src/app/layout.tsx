@@ -1,6 +1,7 @@
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
-import { Figtree } from "next/font/google";
+import localFont from "next/font/local";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -9,10 +10,50 @@ import InViewObserver from "@/components/helper/InViewObserver";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/helper/theme-provider";
 
-const figtree = Figtree({
-  variable: "--font-figtree",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+const aeonik = localFont({
+  variable: "--font-aeonik",
+  src: [
+    {
+      path: "../../public/fonts/aeonik/Aeonik-Air.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/aeonik/Aeonik-Thin.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/aeonik/Aeonik-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/aeonik/Aeonik-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/aeonik/Aeonik-Regular.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/aeonik/Aeonik-Medium.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/aeonik/Aeonik-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/aeonik/Aeonik-Black.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
 });
 
 export default function RootLayout({
@@ -23,7 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       <body
-        className={`${figtree.className} no-scrollbar relative h-full antialiased`}
+        className={`${aeonik.className} no-scrollbar relative h-full antialiased`}
       >
         <ThemeProvider
           attribute="class"

@@ -12,10 +12,17 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "heading": {
+        "heading_1": {
           "type": "Text",
           "config": {
-            "label": "Heading",
+            "label": "Heading 1",
+            "placeholder": ""
+          }
+        },
+        "heading_2": {
+          "type": "Text",
+          "config": {
+            "label": "Heading 2",
             "placeholder": ""
           }
         },
@@ -60,14 +67,6 @@
             "allowTargetBlank": true,
             "allowText": true,
             "repeat": false
-          }
-        },
-        "hero_image": {
-          "type": "Image",
-          "config": {
-            "label": "Hero Image",
-            "constraint": {},
-            "thumbnails": []
           }
         }
       },
