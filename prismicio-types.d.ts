@@ -1382,14 +1382,24 @@ export type FaqsSlice = prismic.SharedSlice<"faqs", FaqsSliceVariation>;
  */
 export interface HeroSliceDefaultPrimary {
   /**
-   * Heading field in *Hero → Default → Primary*
+   * Heading 1 field in *Hero → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.heading
+   * - **API ID Path**: hero.default.primary.heading_1
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
-  heading: prismic.KeyTextField;
+  heading_1: prismic.KeyTextField;
+
+  /**
+   * Heading 2 field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.heading_2
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading_2: prismic.KeyTextField;
 
   /**
    * Description field in *Hero → Default → Primary*
@@ -1452,16 +1462,6 @@ export interface HeroSliceDefaultPrimary {
     prismic.FieldState,
     never
   >;
-
-  /**
-   * Hero Image field in *Hero → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.hero_image
-   * - **Documentation**: https://prismic.io/docs/fields/image
-   */
-  hero_image: prismic.ImageField<never>;
 }
 
 /**

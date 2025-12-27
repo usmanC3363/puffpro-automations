@@ -1,94 +1,29 @@
-// "use client";
-
-// import React, { useEffect, useRef, useState } from "react";
-
-// type CSSLineRevealProps = {
-//   children: string | React.ReactNode;
-//   textClass?: string;
-//   delay?: number;
-//   lineDelay?: number;
-// };
-
-// export default function CSSLineReveal({
-//   children,
-//   textClass = "",
-//   delay = 0,
-//   lineDelay = 20000,
-// }: CSSLineRevealProps) {
-//   const containerRef = useRef<HTMLDivElement>(null);
-//   const [isVisible, setIsVisible] = useState(false);
-
-//   useEffect(() => {
-//     const el = containerRef.current;
-//     if (!el) return;
-
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) {
-//           setIsVisible(true);
-//           observer.unobserve(el);
-//         }
-//       },
-//       { threshold: 0.3 },
-//     );
-
-//     observer.observe(el);
-//     return () => observer.disconnect();
-//   }, []);
-
-//   const lines =
-//     typeof children === "string"
-//       ? children
-//           .split(/\n|<br\s*\/?>/g)
-//           .map((line) => line.trim())
-//           .filter(Boolean)
-//       : [children];
-
-//   return (
-//     <div ref={containerRef} className={`overflow-hidden ${textClass}`}>
-//       {lines.map((line, i) => (
-//         <span
-//           key={i}
-//           className={`block overflow-hidden`}
-//           style={{
-//             opacity: isVisible ? 1 : 0,
-//             display: "block",
-//           }}
-//         >
-//           <span
-//             style={{
-//               display: "inline-block",
-//               transform: isVisible ? "translateY(0%)" : "translateY(100%)",
-//               transition: `transform 0.9s ease-out ${delay + i * lineDelay}s, opacity 0.9s ease-out ${delay + i * lineDelay}s`,
-//               opacity: isVisible ? 1 : 0,
-//             }}
-//           >
-//             {line}
-//           </span>
-//         </span>
-//       ))}
-//     </div>
-//   );
-// }
-
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
 
 type CSSLineRevealProps = {
+  textStyle?: React.CSSProperties;
   children: string | React.ReactNode;
   textClass?: string;
-  delay?: number; // global delay before first line
-  lineDelay?: number; // stagger delay between lines
-  duration?: number; // per-line duration
+  divClass?: string;
+  spanClass?: string;
+  delay?: number; // global start delay
+  lineDelay?: number; // per-line stagger delay
+  duration?: number; // animation duration per line
+  threshold?: number; // intersection visibility threshold
 };
 
 export default function CSSLineReveal({
+  textStyle,
   children,
   textClass = "",
+  divClass = "",
+  spanClass = "",
   delay = 0,
-  lineDelay = 2,
-  duration = 0.8,
+  lineDelay = 1, // smoother stagger — not too slow
+  duration = 1.25,
+  threshold = 0.25, // earlier trigger
 }: CSSLineRevealProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -104,14 +39,14 @@ export default function CSSLineReveal({
           observer.unobserve(el);
         }
       },
-      { threshold: 0.3 },
+      { threshold },
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
-  // Split text into lines (preserve <br/> support)
+  // Split string into multiple lines (<br/> or newline)
   const lines =
     typeof children === "string"
       ? children
@@ -121,25 +56,25 @@ export default function CSSLineReveal({
       : [children];
 
   return (
-    <div ref={containerRef} className={`overflow-hidden ${textClass}`}>
+    <div ref={containerRef} className={`overflow-hidden ${divClass}`}>
       {lines.map((line, i) => (
         <span
           key={i}
-          className="block overflow-hidden will-change-transform"
+          className={`block overflow-hidden will-change-transform ${spanClass}`}
           style={{
-            // acts as the line mask
             transform: "translateZ(0)",
           }}
         >
           <span
-            className="inline-block will-change-transform"
+            className={`inline-block will-change-transform ${textClass}`}
             style={{
-              transform: isVisible ? "translateY(0%)" : "translateY(100%)",
+              transform: isVisible ? "translateY(0%)" : "translateY(110%)",
               opacity: isVisible ? 1 : 0,
               transitionProperty: "transform, opacity",
               transitionDuration: `${duration}s`,
-              transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)", // GSAP-ish smooth curve
+              transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
               transitionDelay: `${delay + i * lineDelay}s`,
+              ...textStyle,
             }}
           >
             {line}

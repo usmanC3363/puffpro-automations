@@ -5,7 +5,6 @@ import { PrismicNextLink } from "@prismicio/next";
 import Bounded from "@/components/helper/Bounded";
 import { Button } from "@/components/ui/button";
 import { GoArrowUpRight } from "react-icons/go";
-import GSAPLineReveal from "@/components/helper/GSAPLineReveal";
 import CSSLineReveal from "@/components/helper/CssLineReveal";
 
 /**
@@ -21,52 +20,54 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className={`flex h-[75vh] w-screen flex-col place-items-center justify-center gap-y-8`}
+      className="flex h-[75vh] w-screen flex-col justify-center"
     >
-      {/* Hero Heading and description */}
-      <div className={`flex flex-col gap-y-6 text-center`}>
-        <GSAPLineReveal textClass="heading-xl">
-          {slice.primary.heading}
-        </GSAPLineReveal>
-        <CSSLineReveal textClass="body-xxl">
-          {slice.primary.description}
-        </CSSLineReveal>
-      </div>
+      <div className="mx-auto flex w-full max-w-7xl flex-col px-6">
+        {/* Top Text Block */}
+        <div className="flex flex-col items-center text-center">
+          {/* Heading */}
+          <CSSLineReveal textClass="text-[40px] capitalize">
+            {slice.primary.heading_1}
+          </CSSLineReveal>
+          <CSSLineReveal textClass="text-[120px] font-semibold uppercase">
+            {slice.primary.heading_2}
+          </CSSLineReveal>
+        </div>
 
-      {/* CTA Buttons */}
-      <div className="flex w-fit items-center gap-x-5">
-        <PrismicNextLink field={slice.primary.cta1_link}>
-          <Button
-            className={`slide-in-left flex h-9 w-fit items-center gap-1 rounded-sm border border-white/20`}
-          >
-            <span className="text-base font-medium">
-              {slice.primary.cta1_label}
-            </span>
-            <GoArrowUpRight
-              className={`size-7 transition-all duration-300 ease-in-out`}
-            />
-          </Button>
-        </PrismicNextLink>
-        <PrismicNextLink field={slice.primary.cta2_link}>
-          <Button
-            variant={"outline"}
-            className={`slide-in-right flex h-9 w-fit items-center gap-1 rounded-sm border border-mycolors-secText/20`}
-          >
-            <span className="text-base font-medium">
-              {slice.primary.cta2_label}
-            </span>
-          </Button>
-        </PrismicNextLink>
-      </div>
+        {/* Divider */}
+        <div className="my-10 h-0.5 w-full bg-white/25" />
 
-      {/* Hero Image  */}
-      {/* <div className="relative flex min-h-[20em] w-full justify-end lg:min-h-[30em]">
-        <PrismicNextImage
-          priority
-          field={slice.primary.hero_image}
-          className="slide-in-down absolute h-full w-full rounded-sm object-cover object-center pt-6"
-        />
-      </div> */}
+        {/* Bottom Row */}
+        <div className="flex w-full flex-col items-center justify-between gap-8 md:flex-row">
+          {/* Description */}
+          <CSSLineReveal textClass="max-w-xl text-left body-lg text-white/70">
+            {slice.primary.description}
+          </CSSLineReveal>
+
+          {/* CTA Buttons */}
+          <div className="flex shrink-0 items-center gap-4">
+            <PrismicNextLink field={slice.primary.cta1_link}>
+              <Button className="flex h-9 items-center gap-1 rounded-sm border border-white/20 px-4">
+                <span className="text-sm font-medium">
+                  {slice.primary.cta1_label}
+                </span>
+                <GoArrowUpRight className="size-5" />
+              </Button>
+            </PrismicNextLink>
+
+            <PrismicNextLink field={slice.primary.cta2_link}>
+              <Button
+                variant="outline"
+                className="flex h-9 items-center rounded-sm border border-white/20 px-4"
+              >
+                <span className="text-sm font-medium">
+                  {slice.primary.cta2_label}
+                </span>
+              </Button>
+            </PrismicNextLink>
+          </div>
+        </div>
+      </div>
     </Bounded>
   );
 };
