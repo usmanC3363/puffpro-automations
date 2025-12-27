@@ -19,7 +19,7 @@ export default async function Menu({ extraClass = "", pageName }: Props) {
   if (pageName === "header") {
     return (
       <menu
-        className={`${extraClass} flex h-full items-center justify-center md:sticky md:top-4`}
+        className={`${extraClass} flex h-full items-center justify-end md:sticky md:top-4`}
       >
         <NewMenu menuLinks={menuLinks} />
       </menu>

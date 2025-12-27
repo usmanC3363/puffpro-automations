@@ -30,7 +30,7 @@ export default function NewMenu({ menuLinks }: Props) {
     <>
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-50 min-h-screen bg-mycolors-cardbglight transition-all duration-300 ease-in-out dark:bg-mycolors-border ${
+        className={`fixed inset-0 z-50 min-h-screen bg-current transition-all duration-300 ease-in-out ${
           open
             ? "translate-x-0 delay-150 lg:hidden"
             : "w-screen translate-x-full delay-500"
@@ -45,9 +45,9 @@ export default function NewMenu({ menuLinks }: Props) {
             return (
               <PrismicNextLink key={index} field={link_url}>
                 <button
-                  className={`${isActive && ""} flex h-10 w-full max-w-full items-center justify-between border-b-[1.5px] border-mycolors-cardbg pb-8 dark:border-mycolors-cardbglight ${
+                  className={`${isActive && ""} flex h-10 w-full max-w-full items-center justify-between border-b-[1.5px] border-black pb-8 dark:border-mycolors-dark-grey ${
                     open
-                      ? "translate-x-0 transition-all duration-200 ease-linear hover:border-mycolors-accent hover:text-mycolors-accent"
+                      ? "translate-x-0 transition-all duration-200 ease-linear hover:border-opacity-70 hover:text-opacity-70"
                       : "translate-x-[100%] transition-all duration-500 ease-in-out"
                   }`}
                   onClick={toggleMenu}
@@ -55,7 +55,7 @@ export default function NewMenu({ menuLinks }: Props) {
                     transitionDelay: `${200 + index * 100}ms`,
                   }}
                 >
-                  <span className="heading-xl uppercase tracking-tighter">
+                  <span className="uppercase tracking-tighter">
                     {link_title}
                   </span>
                 </button>
@@ -67,7 +67,7 @@ export default function NewMenu({ menuLinks }: Props) {
 
       {/* Desktop Menu */}
       {["lg", "xl", "2xl", "3xl"].includes(screenSize || "") && (
-        <div className="flex w-fit justify-center gap-x-8 2xl:gap-x-14">
+        <div className="flex w-fit justify-center gap-x-14 2xl:gap-x-20">
           {menuLinks?.map(({ link_title, link_url }, index) => {
             // AsLink for prismic typesafety, doesnt work without it
             const href = asLink(link_url) || "#";
@@ -75,7 +75,7 @@ export default function NewMenu({ menuLinks }: Props) {
             return (
               <PrismicNextLink field={link_url} key={index}>
                 <button
-                  className={`${isActive ? "rounded-sm bg-mycolors-accent px-2 py-0.5 dark:bg-mycolors-secondary" : "opacity-80 hover:text-mycolors-accent hover:opacity-100"} group h-fit w-fit min-w-20 transition-all duration-300 ease-in-out hover:font-medium`}
+                  className={`${isActive ? "bg-mycolors-accent dark:bg-mycolors-secondary rounded-sm px-2 py-0.5" : "hover:text-mycolors-accent opacity-80 hover:opacity-100"} group h-fit w-fit min-w-20 transition-all duration-300 ease-in-out hover:font-medium`}
                 >
                   <span className="text-nowrap 2xl:text-lg">{link_title}</span>
                 </button>
@@ -110,7 +110,7 @@ export default function NewMenu({ menuLinks }: Props) {
                 y1={y}
                 x2="20"
                 y2={y}
-                className={`stroke-mycolors-secondary stroke-[1.75px] transition-all duration-200 ease-linear ${
+                className={`stroke-current stroke-[1.75px] transition-all duration-200 ease-linear ${
                   open ? "rotate-[40deg]" : ""
                 }`}
               />
