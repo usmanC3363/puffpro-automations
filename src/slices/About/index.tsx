@@ -2,8 +2,11 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Bounded from "@/components/helper/Bounded";
-import { MyRichText } from "@/components/helper/RichText";
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { MyRichText } from "@/components/helper/rich-text";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Arrow } from "@/components/helper/Arrow";
 
 /**
  * Props for `About`.
@@ -18,28 +21,44 @@ const About: FC<AboutProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="mt-32 flex h-full w-screen flex-col place-items-center justify-center gap-y-8"
+      className="my-20 flex h-[40rem] w-screen flex-col place-items-center justify-center gap-y-16"
     >
-      <div className="relative grid h-full w-full gap-x-20 gap-y-14 lg:grid-cols-[1fr_1fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
+      <h1 className="text-[60px] font-medium">{slice.primary.about_heading}</h1>
+
+      {/* IMAGE AND DESCRIPTION GRID */}
+      <div className="relative grid h-full w-full gap-x-32 gap-y-14 lg:grid-cols-[28rem_3fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
         <div
-          className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} flex h-full w-full flex-col gap-y-10`}
+          className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} h-full`}
         >
-          <div className="relative h-[25rem] w-full sm:h-full max-lg:max-w-96">
-            <PrismicNextImage
-              field={slice.primary.about_image}
-              alt=""
-              className="h-[25rem] w-full rounded object-cover object-center"
-            />
-          </div>
+          <PrismicNextImage
+            field={slice.primary.about_image}
+            alt=""
+            className="h-full w-full rounded bg-black object-contain object-center dark:bg-none"
+          />
         </div>
 
+        {/* RICH TEXT DESCRIPTION AND CTA BUTTON */}
         <div
-          className={`${slice.primary.isimageonleft ? "order-2" : "order-1"}`}
+          className={`${slice.primary.isimageonleft ? "order-2" : "order-1"} flex h-fit max-w-lg flex-col gap-y-10 pl-2 sm:place-self-end lg:max-w-full lg:pl-4 max-sm:py-6`}
         >
-          <div className="hidden h-[4.75rem] w-full lg:block" />
-          <div className="body-xxl flex h-fit max-w-lg flex-col gap-y-4 pl-2 sm:place-self-end md:text-base lg:max-w-3xl lg:place-self-start lg:pl-4 max-sm:py-6">
-            <MyRichText field={slice.primary.about_content} />
-          </div>
+          <MyRichText
+            field={slice.primary.about_content}
+            components={{
+              paragraph: ({ children }) => (
+                <p className="text-[23px] leading-[150%] text-mycolors-black/85 dark:text-mycolors-grey">
+                  {children}
+                </p>
+              ),
+            }}
+          />
+          <Button asChild variant="outline" className="w-fit">
+            <Link href="/">
+              <span className="pb-0.5 text-base font-light">Contact Now</span>
+              <div className="flex items-center">
+                <Arrow svgClass="h-full w-full" name="main" />
+              </div>
+            </Link>
+          </Button>
         </div>
       </div>
     </Bounded>

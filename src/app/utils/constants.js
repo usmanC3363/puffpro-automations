@@ -37,8 +37,7 @@ export const isDarkColor = (bgColor) => {
 
 export const paddingClass = "px-[24px] lg:px-[44px] xl:px-[80px] 2xl:px-8";
 
-export const secHeading =
-  "text-5xl sm:text-6xl -tracking-[0.03em] lg:text-7xl font-light capitalize";
+export const secHeading = "text-5xl sm:text-6xl  lg:text-7xl  capitalize";
 
 // export const Arrows = ({ styles }) => {
 //   return (

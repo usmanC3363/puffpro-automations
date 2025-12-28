@@ -12,46 +12,35 @@ import { ThemeProvider } from "@/components/helper/theme-provider";
 
 const aeonik = localFont({
   variable: "--font-aeonik",
+  fallback: ["system-ui", "sans-serif"],
   src: [
     {
       path: "../../public/fonts/aeonik/Aeonik-Air.woff2",
       weight: "100",
-      style: "normal",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Thin.woff2",
       weight: "200",
-      style: "normal",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Light.woff2",
       weight: "300",
-      style: "normal",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Regular.woff2",
       weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/aeonik/Aeonik-Regular.woff2",
-      weight: "500",
-      style: "normal",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Medium.woff2",
-      weight: "600",
-      style: "normal",
+      weight: "500",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Bold.woff2",
-      weight: "700",
-      style: "normal",
+      weight: "600",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Black.woff2",
-      weight: "800",
-      style: "normal",
+      weight: "700",
     },
   ],
 });
@@ -62,10 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
-      <body
-        className={`${aeonik.className} no-scrollbar relative h-full antialiased`}
-      >
+    <html lang="en" className="no-scrollbar" suppressHydrationWarning>
+      <body className={`${aeonik.variable} relative antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
