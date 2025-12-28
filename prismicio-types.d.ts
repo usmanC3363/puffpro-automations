@@ -714,6 +714,16 @@ export type AllDocumentTypes =
  */
 export interface AboutSliceDefaultPrimary {
   /**
+   * About Heading field in *About → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.default.primary.about_heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  about_heading: prismic.KeyTextField;
+
+  /**
    * isImageonLeft field in *About → Default → Primary*
    *
    * - **Field Type**: Boolean

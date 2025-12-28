@@ -40,6 +40,11 @@
 			"isimageonleft": {
 				"__TYPE__": "BooleanContent",
 				"value": false
+			},
+			"about_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "know",
+				"type": "Text"
 			}
 		},
 		"items": []
