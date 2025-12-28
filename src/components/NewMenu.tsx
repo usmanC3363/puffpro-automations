@@ -67,7 +67,7 @@ export default function NewMenu({ menuLinks }: Props) {
 
       {/* Desktop Menu */}
       {["lg", "xl", "2xl", "3xl"].includes(screenSize || "") && (
-        <div className="flex w-fit justify-center gap-x-14 2xl:gap-x-20">
+        <div className="flex w-[70%] justify-between">
           {menuLinks?.map(({ link_title, link_url }, index) => {
             // AsLink for prismic typesafety, doesnt work without it
             const href = asLink(link_url) || "#";
@@ -75,9 +75,11 @@ export default function NewMenu({ menuLinks }: Props) {
             return (
               <PrismicNextLink field={link_url} key={index}>
                 <button
-                  className={`${isActive ? "bg-mycolors-accent dark:bg-mycolors-secondary rounded-sm px-2 py-0.5" : "hover:text-mycolors-accent opacity-80 hover:opacity-100"} group h-fit w-fit min-w-20 transition-all duration-300 ease-in-out hover:font-medium`}
+                  className={`${isActive ? "" : ""} group h-fit w-fit min-w-20 px-2 font-light transition-all duration-300 ease-in-out hover:opacity-100`}
                 >
-                  <span className="text-nowrap 2xl:text-lg">{link_title}</span>
+                  <span className="text-nowrap tracking-wide text-mycolors-white 2xl:text-lg">
+                    {link_title}
+                  </span>
                 </button>
               </PrismicNextLink>
             );

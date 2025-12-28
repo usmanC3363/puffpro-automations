@@ -21,15 +21,15 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex h-full w-screen flex-col justify-center gap-y-20 py-20"
+      className="flex h-full w-screen flex-col justify-center gap-y-20 py-24"
     >
       {/* Top Text Block */}
-      <div className="flex flex-col items-center gap-4 text-center">
+      <div className="flex flex-col items-center gap-2 text-center">
         {/* Heading */}
         <CSSLineReveal textClass="text-[40px] capitalize">
           {slice.primary.heading_1}
         </CSSLineReveal>
-        <CSSLineReveal textClass="text-[120px] leading-none font-semibold uppercase">
+        <CSSLineReveal textClass="text-[120px] leading-none font-medium uppercase">
           {slice.primary.heading_2}
         </CSSLineReveal>
       </div>
@@ -41,32 +41,27 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         {/* Bottom Row */}
         <div className="gap-auto grid w-full grid-cols-1 items-center justify-between md:grid-cols-[1fr_1fr]">
           {/* Description */}
-          <CSSLineReveal textClass="max-w-lg xl:max-w-[550px] text-left text-[20px] tracking-[0%]  font-light">
+          <CSSLineReveal textClass="max-w-lg xl:max-w-[550px] text-left text-[20px] tracking-[0%]">
             {slice.primary.description}
           </CSSLineReveal>
 
           {/* CTA Buttons */}
-          <div className="flex shrink-0 items-center gap-4 justify-self-end">
-            <Button asChild variant="outline" className="shrink-0">
+          <div className="flex items-center gap-4 justify-self-end">
+            <Button asChild variant="outline" className="">
               <PrismicNextLink field={slice.primary.cta1_link}>
-                <span className="text-sm font-medium">
+                <span className="pb-0.5 font-normal">
                   {slice.primary.cta1_label}
                 </span>
-                <div className="flex h-full w-full !flex-1 !shrink-0 items-center">
-                  <Arrow
-                    svgClass="!flex-1 !shrink-0 h-full w-full"
-                    name="main"
-                  />
-                </div>
+                <Arrow svgClass="h-full w-full" name="main" />
               </PrismicNextLink>
             </Button>
 
             <Button variant="outline" asChild>
               <PrismicNextLink field={slice.primary.cta2_link}>
-                <span className="text-sm font-medium">
+                <span className="pb-0.5 font-normal">
                   {slice.primary.cta2_label}
                 </span>
-                <Arrow svgClass="scale-125" name="bullet" />
+                <Arrow svgClass="scale-110" name="bullet" />
               </PrismicNextLink>
             </Button>
           </div>
