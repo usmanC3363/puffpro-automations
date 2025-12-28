@@ -12,6 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "about_heading": {
+          "type": "Text",
+          "config": {
+            "label": "About Heading",
+            "placeholder": ""
+          }
+        },
         "isimageonleft": {
           "type": "Boolean",
           "config": {
