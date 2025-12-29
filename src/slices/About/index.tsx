@@ -21,12 +21,12 @@ const About: FC<AboutProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="my-20 flex h-[40rem] w-screen flex-col place-items-center justify-center gap-y-16"
+      className="my-20 flex h-full max-h-full w-screen flex-col place-items-center justify-center gap-y-16"
     >
       <h1 className="text-[60px] font-medium">{slice.primary.about_heading}</h1>
 
       {/* IMAGE AND DESCRIPTION GRID */}
-      <div className="relative grid h-full w-full gap-x-36 gap-y-14 lg:grid-cols-[33rem_45vw] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
+      <div className="relative grid h-full w-full gap-x-16 gap-y-14 lg:grid-cols-[33rem_auto] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
         <div
           className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} flex h-full flex-col items-center`}
         >
@@ -45,7 +45,7 @@ const About: FC<AboutProps> = ({ slice }) => {
             field={slice.primary.about_content}
             components={{
               paragraph: ({ children }) => (
-                <p className="text-[23px] leading-[150%] text-mycolors-black/85 dark:text-mycolors-grey">
+                <p className="text-[23px] font-normal leading-[150%] text-mycolors-black/85 dark:text-mycolors-grey">
                   {children}
                 </p>
               ),

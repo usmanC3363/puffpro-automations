@@ -15,7 +15,7 @@ html {
 body {
   box-sizing: border-box;
   margin: 0;
-  letter-spacing: 0.7px;
+  /* letter-spacing: 0.5px; */
   color: var(--foreground-color);
   /* font-weight: 300; */
   font-family: var(--font-aeonik), system-ui, sans-serif;

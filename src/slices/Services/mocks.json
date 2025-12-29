@@ -87,9 +87,15 @@
 				"type": "Text"
 			},
 			"description": {
-				"__TYPE__": "FieldContent",
-				"value": "news",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Veniam deserunt eiusmod non anim eu eiusmod in pariatur adipisicing id ullamco quis enim laboris voluptate."
+						}
+					}
+				]
 			}
 		},
 		"items": []
