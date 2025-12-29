@@ -17,30 +17,37 @@ const aeonik = localFont({
     {
       path: "../../public/fonts/aeonik/Aeonik-Air.woff2",
       weight: "100",
+      style: "thin",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Thin.woff2",
       weight: "200",
+      style: "light",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Light.woff2",
       weight: "300",
+      style: "extralight",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Regular.woff2",
       weight: "400",
+      style: "normal",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Medium.woff2",
       weight: "500",
+      style: "medium",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Bold.woff2",
       weight: "600",
+      style: "bold",
     },
     {
       path: "../../public/fonts/aeonik/Aeonik-Black.woff2",
       weight: "700",
+      style: "black",
     },
   ],
 });
@@ -52,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="no-scrollbar" suppressHydrationWarning>
-      <body className={`${aeonik.variable} relative antialiased`}>
+      <body className={`${aeonik.variable} relative`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

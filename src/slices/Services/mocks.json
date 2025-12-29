@@ -36,42 +36,10 @@
 								}
 							],
 							[
-								"service_label",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "track",
-									"type": "Text"
-								}
-							],
-							[
 								"service_description",
 								{
 									"__TYPE__": "FieldContent",
 									"value": "nice",
-									"type": "Text"
-								}
-							],
-							[
-								"service_tag",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "several",
-									"type": "Text"
-								}
-							],
-							[
-								"service_tag2",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "probably",
-									"type": "Text"
-								}
-							],
-							[
-								"service_tag3",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "size",
 									"type": "Text"
 								}
 							],
@@ -84,7 +52,21 @@
 								}
 							],
 							[
-								"iscardonleft",
+								"points",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Aute magna nulla fugiat consequat deserunt consectetur ex irure labore voluptate. Amet mollit amet ut irure incididunt duis amet."
+											}
+										}
+									]
+								}
+							],
+							[
+								"iscardimgonleft",
 								{
 									"__TYPE__": "BooleanContent",
 									"value": false
@@ -93,6 +75,21 @@
 						]
 					}
 				]
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "church",
+				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "themselves",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "news",
+				"type": "Text"
 			}
 		},
 		"items": []
