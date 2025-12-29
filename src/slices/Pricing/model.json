@@ -55,6 +55,13 @@
                   "placeholder": ""
                 }
               },
+              "setup_fee": {
+                "type": "Text",
+                "config": {
+                  "label": "Setup Fee",
+                  "placeholder": ""
+                }
+              },
               "plan_details": {
                 "type": "StructuredText",
                 "config": {
