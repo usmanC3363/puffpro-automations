@@ -2037,12 +2037,12 @@ export interface ServicesSliceDefaultPrimary {
   /**
    * Description field in *Services → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: services.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/fields/text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
-  description: prismic.KeyTextField;
+  description: prismic.RichTextField;
 
   /**
    * Services Data field in *Services → Default → Primary*

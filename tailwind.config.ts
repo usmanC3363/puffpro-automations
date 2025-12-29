@@ -57,9 +57,9 @@ module.exports = {
         40: "40%",
         50: "50%",
       },
-      // fontFamily: {
-      //   sans: ["var(--font-aeonik)"],
-      // },
+      fontFamily: {
+        sans: ["var(--font-aeonik)"],
+      },
       colors: {
         mycolors: {
           black: "#000000",
