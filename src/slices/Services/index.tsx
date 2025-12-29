@@ -7,6 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import clsx from "clsx";
 import CSSLineReveal from "@/components/helper/CssLineReveal";
 import { MyRichText } from "@/components/helper/RichText";
+import { Arrow } from "@/components/helper/Arrow";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 /**
  * Props for `Services`.
@@ -30,14 +33,11 @@ const Services: FC<ServicesProps> = ({ slice }) => {
         {slice.primary.services_data.map(
           (
             {
-              iscardonleft,
-              service_label,
+              iscardimgonleft,
               service_title,
               service_description,
-              service_tag,
-              service_tag2,
-              service_tag3,
               card_image,
+              points,
             },
             index,
           ) => (
@@ -46,46 +46,45 @@ const Services: FC<ServicesProps> = ({ slice }) => {
               className="grid h-full w-full gap-x-20 gap-y-12 md:grid-cols-2 xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl"
             >
               <div
-                className={`${iscardonleft ? "md:order-2" : "md:order-1"} flex flex-col gap-y-6`}
+                className={`${iscardimgonleft ? "md:order-2" : "md:order-1"} flex flex-col gap-y-6`}
               >
-                <Badge
-                  variant="custom"
-                  className={clsx("fade-up py-0.5 text-base font-medium")}
-                >
-                  {service_label}
-                </Badge>
-                <CSSLineReveal textClass="heading-m">
+                <CSSLineReveal textClass="text-[40px] font-medium max-w-[70%]">
                   {service_title}
                 </CSSLineReveal>
-                <CSSLineReveal textClass="card-content">
-                  {service_description}
-                </CSSLineReveal>
-                <div className="flex gap-2">
-                  <Badge
-                    variant="custom"
-                    className={clsx("fade-up py-0.5 text-sm font-normal")}
-                  >
-                    {service_tag}
-                  </Badge>
-                  <Badge
-                    variant="custom"
-                    className={clsx("fade-up py-0.5 text-sm font-normal")}
-                  >
-                    {service_tag2}
-                  </Badge>
-
-                  {service_tag3 !== null ? (
-                    <Badge
-                      variant="custom"
-                      className={clsx("fade-up py-0.5 text-sm font-normal")}
-                    >
-                      {service_tag3}
-                    </Badge>
-                  ) : null}
+                <div
+                  className={`flex flex-col gap-y-8 ${iscardimgonleft ? "" : "pl-28"} `}
+                >
+                  <CSSLineReveal textClass="font-light text-[16px] leading-[150%]">
+                    {service_description}
+                  </CSSLineReveal>
+                  <MyRichText
+                    field={points}
+                    components={{
+                      list: ({ children }) => (
+                        <ul className="list-none space-y-4">{children}</ul>
+                      ),
+                      listItem: ({ children }) => (
+                        <li className="flex items-center gap-x-3 text-base font-normal">
+                          <Arrow name="bullet" />
+                          {children}
+                        </li>
+                      ),
+                    }}
+                  />
+                  <Button asChild variant="outline" className="w-fit">
+                    <Link href="/">
+                      <span className="pb-0.5 text-base font-normal">
+                        Contact Now
+                      </span>
+                      <div className="flex items-center">
+                        <Arrow svgClass="h-full w-full" name="main" />
+                      </div>
+                    </Link>
+                  </Button>
                 </div>
               </div>
               <div
-                className={`${iscardonleft ? "slide-in-left md:order-1" : "slide-in-right md:order-2"} relative box-border h-full min-h-[360px] w-full rounded-lg bg-mycolors-cardbglight dark:bg-mycolors-cardbg`}
+                className={`${iscardimgonleft ? "md:order-1" : "md:order-2"} bg-mycolors-cardbglight dark:bg-mycolors-cardbg relative box-border h-full min-h-[360px] w-full rounded-lg`}
               >
                 <PrismicNextImage
                   className="absolute bottom-0 left-[5%] h-[90%] w-[90%] rounded-3xl object-contain"
@@ -147,7 +146,7 @@ const Services: FC<ServicesProps> = ({ slice }) => {
                 </div>
               </div>
               <div
-                className={`${iscardonleft ? "slide-in-left md:order-1" : "slide-in-right md:order-2"} relative box-border h-full min-h-[360px] w-full rounded-xl bg-mycolors-cardbglight dark:bg-mycolors-cardbg`}
+                className={`${iscardonleft ? "md:order-1" : "md:order-2"} relative box-border h-full min-h-[360px] w-full rounded-xl`}
               >
                 {/* <div className="absolute inset-0 rounded-xl bg-black/50" /> */}
                 <PrismicNextImage

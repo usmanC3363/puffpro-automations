@@ -1903,15 +1903,15 @@ export type SectionContentSlice = prismic.SharedSlice<
  */
 export interface ServicesSliceDefaultPrimaryServicesDataItem {
   /**
-   * isCardonLeft field in *Services → Default → Primary → Services Data*
+   * isCardImgonLeft field in *Services → Default → Primary → Services Data*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: services.default.primary.services_data[].iscardonleft
+   * - **API ID Path**: services.default.primary.services_data[].iscardimgonleft
    * - **Documentation**: https://prismic.io/docs/fields/boolean
    */
-  iscardonleft: prismic.BooleanField;
+  iscardimgonleft: prismic.BooleanField;
 
   /**
    * Card Image field in *Services → Default → Primary → Services Data*
@@ -1922,16 +1922,6 @@ export interface ServicesSliceDefaultPrimaryServicesDataItem {
    * - **Documentation**: https://prismic.io/docs/fields/image
    */
   card_image: prismic.ImageField<never>;
-
-  /**
-   * Service Label field in *Services → Default → Primary → Services Data*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services.default.primary.services_data[].service_label
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  service_label: prismic.KeyTextField;
 
   /**
    * Service Title field in *Services → Default → Primary → Services Data*
@@ -1954,34 +1944,14 @@ export interface ServicesSliceDefaultPrimaryServicesDataItem {
   service_description: prismic.KeyTextField;
 
   /**
-   * Service Tag field in *Services → Default → Primary → Services Data*
+   * Points field in *Services → Default → Primary → Services Data*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: services.default.primary.services_data[].service_tag
-   * - **Documentation**: https://prismic.io/docs/fields/text
+   * - **API ID Path**: services.default.primary.services_data[].points
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
-  service_tag: prismic.KeyTextField;
-
-  /**
-   * Service Tag2 field in *Services → Default → Primary → Services Data*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services.default.primary.services_data[].service_tag2
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  service_tag2: prismic.KeyTextField;
-
-  /**
-   * Service Tag3 field in *Services → Default → Primary → Services Data*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services.default.primary.services_data[].service_tag3
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  service_tag3: prismic.KeyTextField;
+  points: prismic.RichTextField;
 }
 
 /**
@@ -2044,6 +2014,36 @@ export interface ServicesSliceServiceSelfPrimaryServicesDataItem {
  * Primary content in *Services → Default → Primary*
  */
 export interface ServicesSliceDefaultPrimary {
+  /**
+   * Title field in *Services → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Heading field in *Services → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Description field in *Services → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  description: prismic.KeyTextField;
+
   /**
    * Services Data field in *Services → Default → Primary*
    *

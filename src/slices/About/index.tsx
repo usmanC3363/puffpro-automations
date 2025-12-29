@@ -26,14 +26,14 @@ const About: FC<AboutProps> = ({ slice }) => {
       <h1 className="text-[60px] font-medium">{slice.primary.about_heading}</h1>
 
       {/* IMAGE AND DESCRIPTION GRID */}
-      <div className="relative grid h-full w-full gap-x-32 gap-y-14 lg:grid-cols-[28rem_3fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
+      <div className="relative grid h-full w-full gap-x-36 gap-y-14 lg:grid-cols-[33rem_45vw] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
         <div
-          className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} h-full`}
+          className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} flex h-full flex-col items-center`}
         >
           <PrismicNextImage
             field={slice.primary.about_image}
             alt=""
-            className="h-full w-full rounded bg-black object-contain object-center dark:bg-none"
+            className="h-[28rem] w-[28rem] rounded bg-black object-contain object-center dark:bg-none"
           />
         </div>
 
@@ -53,7 +53,7 @@ const About: FC<AboutProps> = ({ slice }) => {
           />
           <Button asChild variant="outline" className="w-fit">
             <Link href="/">
-              <span className="pb-0.5 text-base font-light">Contact Now</span>
+              <span className="pb-0.5 text-base font-normal">Contact Now</span>
               <div className="flex items-center">
                 <Arrow svgClass="h-full w-full" name="main" />
               </div>

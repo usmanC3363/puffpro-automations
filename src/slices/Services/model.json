@@ -12,16 +12,37 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
         "services_data": {
           "type": "Group",
           "config": {
             "label": "Services Data",
             "repeat": true,
             "fields": {
-              "iscardonleft": {
+              "iscardimgonleft": {
                 "type": "Boolean",
                 "config": {
-                  "label": "isCardonLeft",
+                  "label": "isCardImgonLeft",
                   "placeholder_false": "false",
                   "placeholder_true": "true",
                   "default_value": false
@@ -33,13 +54,6 @@
                   "label": "Card Image",
                   "constraint": {},
                   "thumbnails": []
-                }
-              },
-              "service_label": {
-                "type": "Text",
-                "config": {
-                  "label": "Service Label",
-                  "placeholder": ""
                 }
               },
               "service_title": {
@@ -56,25 +70,13 @@
                   "placeholder": ""
                 }
               },
-              "service_tag": {
-                "type": "Text",
+              "points": {
+                "type": "StructuredText",
                 "config": {
-                  "label": "Service Tag",
-                  "placeholder": ""
-                }
-              },
-              "service_tag2": {
-                "type": "Text",
-                "config": {
-                  "label": "Service Tag2",
-                  "placeholder": ""
-                }
-              },
-              "service_tag3": {
-                "type": "Text",
-                "config": {
-                  "label": "Service Tag3",
-                  "placeholder": ""
+                  "label": "Points",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                 }
               }
             }
