@@ -58,12 +58,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="no-scrollbar antialiased"
-      suppressHydrationWarning
-    >
-      <body className={`${aeonik.variable} antialiased`}>
+    <html lang="en" className="no-scrollbar" suppressHydrationWarning>
+      <body className={`${aeonik.className} `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -17,7 +17,7 @@ export default async function Footer() {
   return (
     // Flex Container
     <footer
-      className={`${paddingClass} flex h-full flex-col items-center justify-center border-y border-white/20 bg-[radial-gradient(ellipse_80%_60%_at_bottom,rgba(37,74,155,0.3)_0%,rgba(37,74,155,0.145)_35%,#ececec_75%)] px-4 py-8 dark:bg-[radial-gradient(ellipse_80%_60%_at_bottom,rgba(37,74,155,0.3)_0%,rgba(37,74,155,0.145)_35%,#0f0f0f_75%)] md:max-h-[26rem] lg:max-h-[30rem] 2xl:max-h-[40rem]`}
+      className={`${paddingClass} flex h-full flex-col items-center justify-center border-t border-mycolors-white px-4 py-8 md:max-h-[26rem] lg:max-h-[30rem] 2xl:max-h-[40rem]`}
     >
       {/* Main Grid */}
 
@@ -44,7 +44,7 @@ export default async function Footer() {
               <input
                 type="email"
                 placeholder="name@example.com"
-                className="fade-up max-w-full flex-1 rounded-md border border-black/40 bg-transparent py-4 pl-4 text-base placeholder-black/50 focus:outline-none dark:border-white/40 dark:bg-mycolors-cardbg dark:placeholder-white/30"
+                className="fade-up dark:bg-mycolors-cardbg max-w-full flex-1 rounded-md border border-current bg-transparent/50 py-4 pl-4 text-base placeholder-mycolors-grey focus:outline-none dark:border-white/40 dark:placeholder-white/30"
               />
               <Button
                 size="lg"

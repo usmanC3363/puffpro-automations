@@ -1870,12 +1870,12 @@ export interface SectionContentSliceDefaultPrimary {
   /**
    * Section Description field in *SectionContent → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: section_content.default.primary.section_description
-   * - **Documentation**: https://prismic.io/docs/fields/text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
-  section_description: prismic.KeyTextField;
+  section_description: prismic.RichTextField;
 }
 
 /**
@@ -2024,36 +2024,6 @@ export interface ServicesSliceServiceSelfPrimaryServicesDataItem {
  * Primary content in *Services → Default → Primary*
  */
 export interface ServicesSliceDefaultPrimary {
-  /**
-   * Title field in *Services → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Heading field in *Services → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services.default.primary.heading
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  heading: prismic.KeyTextField;
-
-  /**
-   * Description field in *Services → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services.default.primary.description
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
-   */
-  description: prismic.RichTextField;
-
   /**
    * Services Data field in *Services → Default → Primary*
    *

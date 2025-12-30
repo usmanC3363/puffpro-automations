@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { MainArrow, LinkArrow, BulletArrow } from "./icons";
+import { MainArrow, LinkArrow, BulletArrow, Plus, Minus } from "./icons";
 
-type ArrowName = "main" | "link" | "bullet";
+type ArrowName = "main" | "link" | "bullet" | "plus" | "minus";
 type ArrowPosition = "right" | "left" | "topright" | "bottomleft";
 
 interface ArrowProps {
@@ -25,6 +25,8 @@ const ICONS: Record<ArrowName, React.FC<{ className?: string }>> = {
   main: MainArrow,
   link: LinkArrow,
   bullet: BulletArrow,
+  plus: Plus,
+  minus: Minus,
 };
 
 export const Arrow = ({
@@ -47,7 +49,7 @@ export const Arrow = ({
   if (withLink) {
     return (
       <Link href={url}>
-        <Icon className={`group ${svgClass} `} />
+        <Icon className={`group ${svgClass}`} />
       </Link>
     );
   }

@@ -20,7 +20,7 @@ const Pricing: FC<PricingProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="my-12 flex h-full w-screen flex-col place-items-center justify-center gap-y-8"
+      className="my-16 flex h-full w-screen flex-col place-items-center justify-center gap-y-8"
     >
       {/* Toggle */}
       <span className="flex items-center justify-center">

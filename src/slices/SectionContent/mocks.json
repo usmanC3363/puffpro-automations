@@ -14,9 +14,15 @@
 				"type": "Text"
 			},
 			"section_description": {
-				"__TYPE__": "FieldContent",
-				"value": "bound",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "In ullamco deserunt laborum aliquip officia ad commodo magna."
+						}
+					}
+				]
 			}
 		},
 		"items": []
