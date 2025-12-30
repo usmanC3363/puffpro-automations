@@ -23,11 +23,11 @@ export const CtaButtons = ({ className }: CtaButtonsProps) => {
         <Button className="max-w-fit">
           <Badge
             variant={"custom"}
-            className="absolute translate-x-0 text-base opacity-0 transition-all duration-150 ease-linear group-hover:-translate-x-[5.5rem] group-hover:scale-x-100 group-hover:opacity-100"
+            className="absolute translate-x-0 text-base font-normal opacity-0 transition-all duration-150 ease-linear group-hover:-translate-x-[5.5rem] group-hover:scale-x-100 group-hover:opacity-100"
           >
             See Demo
           </Badge>
-          <Phone className="size-7 -scale-x-100 transition-all duration-150 ease-linear group-hover:stroke-black" />
+          <Phone className="size-7 transition-all duration-150 ease-linear group-hover:scale-125" />
         </Button>
       </Link>
       <Link
@@ -37,7 +37,7 @@ export const CtaButtons = ({ className }: CtaButtonsProps) => {
         <Button className="max-w-fit" variant="outline">
           <Badge
             variant={"custom"}
-            className="absolute translate-x-0 text-base opacity-0 transition-all duration-150 ease-linear group-hover:-translate-x-[5.5rem] group-hover:scale-x-100 group-hover:opacity-100"
+            className="absolute translate-x-0 text-base font-normal opacity-0 transition-all duration-150 ease-linear group-hover:-translate-x-[5.5rem] group-hover:scale-x-100 group-hover:opacity-100"
           >
             Book a Call
           </Badge>

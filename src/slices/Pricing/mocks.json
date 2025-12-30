@@ -54,6 +54,14 @@
 									"value": "sweet",
 									"type": "Text"
 								}
+							],
+							[
+								"setup_fee",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "exchange",
+									"type": "Text"
+								}
 							]
 						]
 					}

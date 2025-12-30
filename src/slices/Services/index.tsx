@@ -79,7 +79,7 @@ const Services: FC<ServicesProps> = ({ slice }) => {
               <div
                 className={`${iscardimgonleft ? "md:order-2" : "md:order-1"} flex flex-col gap-y-6`}
               >
-                <CSSLineReveal textClass="text-[40px] leading-[130%] font-medium max-w-[75%] line-clamp-2">
+                <CSSLineReveal textClass="text-[40px] leading-[130%] font-medium max-w-[90%] line-clamp-2">
                   {service_title}
                 </CSSLineReveal>
                 <div

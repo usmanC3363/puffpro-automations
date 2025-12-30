@@ -1628,6 +1628,16 @@ export interface PricingSliceDefaultPrimaryPricingDataItem {
   plan_description: prismic.KeyTextField;
 
   /**
+   * Setup Fee field in *Pricing → Default → Primary → Pricing Data*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.default.primary.pricing_data[].setup_fee
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  setup_fee: prismic.KeyTextField;
+
+  /**
    * Plan Details field in *Pricing → Default → Primary → Pricing Data*
    *
    * - **Field Type**: Rich Text

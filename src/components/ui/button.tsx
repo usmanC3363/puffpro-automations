@@ -9,10 +9,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary:
-          "bg-mycolors-accent dark:bg-mycolors-secondary body-xl  dark:text-primary",
+        primary: "body-xl dark:text-primary",
         secondary:
-          "bg-mycolors-cardbglight border border-black/20 dark:bg-secondary text-secondary-foreground shadow-md dark:shadow-sm hover:bg-secondary/80",
+          " border border-black/20 dark:bg-secondary text-secondary-foreground shadow-md dark:shadow-sm hover:bg-secondary/80",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
