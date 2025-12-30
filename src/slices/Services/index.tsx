@@ -26,41 +26,11 @@ const Services: FC<ServicesProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={clsx(
-        "my-44 flex h-full max-h-full flex-col place-items-center justify-center gap-y-24",
+        "my-44 flex h-full max-h-full flex-col place-items-center justify-center",
       )}
     >
-      <div className="grid grid-cols-1 gap-y-4">
-        <div className="flex flex-col gap-y-8">
-          {/* SECTION TITLE with border */}
-          <div className="flex w-full justify-between border-b border-mycolors-white pb-3">
-            <div className="flex gap-x-2">
-              {/* <div className="">
-                <Arrow name="link" svgClass="size-5" />
-              </div> */}
-              <h3 className="text-[16px]">{slice.primary.title}</h3>
-            </div>
-            <span className="">Lorem Ipsum</span>
-          </div>
-          <div className="">
-            <h1 className="w-fit max-w-[78%] text-[80px] font-medium capitalize leading-[125%] tracking-[-0.0115em]">
-              {slice.primary.heading}
-            </h1>
-          </div>
-        </div>
-        <div className="flex max-w-[41%] flex-col gap-y-9 justify-self-end text-base font-light leading-[150%]">
-          <MyRichText field={slice.primary.description} />
-          <Button asChild variant="outline" className="w-fit">
-            <Link href="/">
-              <span className="pb-0.5 text-base font-normal">Contact Now</span>
-              <div className="flex items-center">
-                <Arrow svgClass="h-full w-full" name="main" />
-              </div>
-            </Link>
-          </Button>
-        </div>
-      </div>
-
       <div className="flex flex-col gap-y-[7.5rem] lg:gap-y-36">
+        {/* CARDS */}
         {slice.primary.services_data.map(
           (
             {

@@ -75,27 +75,6 @@
 						]
 					}
 				]
-			},
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "church",
-				"type": "Text"
-			},
-			"heading": {
-				"__TYPE__": "FieldContent",
-				"value": "themselves",
-				"type": "Text"
-			},
-			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Veniam deserunt eiusmod non anim eu eiusmod in pariatur adipisicing id ullamco quis enim laboris voluptate."
-						}
-					}
-				]
 			}
 		},
 		"items": []
