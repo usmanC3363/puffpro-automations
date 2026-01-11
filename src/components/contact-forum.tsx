@@ -82,9 +82,9 @@ export default function ContactForum() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto w-full max-w-md space-y-5 rounded-2xl border border-white/10 p-6 shadow-xl backdrop-blur dark:bg-black/60"
+      className="mx-auto w-full max-w-md space-y-5 rounded-lg border border-white/10 p-6 tracking-wide text-mycolors-white shadow-xl backdrop-blur dark:bg-black/60"
     >
-      <h2 className="text-3xl font-semibold">Get in touch</h2>
+      <h2 className="text-3xl font-medium text-mycolors-white">Get in touch</h2>
 
       <Input
         name="name"
@@ -116,7 +116,7 @@ export default function ContactForum() {
       />
 
       <div>
-        <label className="mb-2 block text-sm font-medium">
+        <label className="mb-2 block text-sm">
           Preferred Date & Time{" "}
           <span className="text-xs opacity-50">
             (click the icon to set time and date)
@@ -129,14 +129,14 @@ export default function ContactForum() {
             min={minDate}
             value={form.date}
             onChange={handleChange}
-            className="focus:border-mycolors-purple focus:ring-mycolors-purple w-1/2 cursor-pointer border-white/20 bg-white/5 dark:[filter:invert(1)_brightness(7)]"
+            className="focus:border-mycolors-purple focus:ring-mycolors-purple w-1/2 cursor-pointer border-white/20 bg-white/5"
           />
           <Input
             name="time"
             type="time"
             value={form.time}
             onChange={handleChange}
-            className="focus:border-mycolors-purple focus:ring-mycolors-purple w-1/2 cursor-pointer border-white/20 bg-white/5 dark:[filter:invert(1)_brightness(7)]"
+            className="focus:border-mycolors-purple focus:ring-mycolors-purple w-1/2 cursor-pointer border-white/20 bg-white/5"
           />
         </div>
       </div>
@@ -150,10 +150,11 @@ export default function ContactForum() {
 
       <Button
         type="submit"
+        variant={"outline"}
         disabled={status === "loading"}
-        className="w-full transition-all duration-150 ease-linear hover:bg-mycolors-secondary/90 hover:tracking-tight"
+        className="w-full rounded-sm transition-all duration-150 ease-linear hover:tracking-tight"
       >
-        {status === "loading" ? "Sending..." : "Send Message"}
+        {status === "loading" ? "Sending..." : "Send Messeage"}
       </Button>
     </form>
   );
