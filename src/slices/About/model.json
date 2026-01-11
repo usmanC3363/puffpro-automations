@@ -47,6 +47,31 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "secondAbout",
+      "name": "secondAbout",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "about_title": {
+          "type": "Text",
+          "config": {
+            "label": "About Title",
+            "placeholder": ""
+          }
+        },
+        "about_content": {
+          "type": "Text",
+          "config": {
+            "label": "About Content",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

@@ -7,6 +7,8 @@ import { MyRichText } from "@/components/helper/rich-text";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Arrow } from "@/components/helper/Arrow";
+import { cn } from "@/lib/utils";
+import CSSLineReveal from "@/components/helper/CssLineReveal";
 
 /**
  * Props for `About`.
@@ -17,7 +19,7 @@ export type AboutProps = SliceComponentProps<Content.AboutSlice>;
  * Component for "About" Slices.
  */
 const About: FC<AboutProps> = ({ slice }) => {
-  return (
+  return slice.variation === "default" ? (
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
@@ -30,11 +32,24 @@ const About: FC<AboutProps> = ({ slice }) => {
         <div
           className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} flex h-full flex-col items-center`}
         >
-          <PrismicNextImage
+          {/* <PrismicNextImage
             field={slice.primary.about_image}
             alt=""
             className="h-[28rem] w-[28rem] rounded bg-black object-contain object-center dark:bg-none"
-          />
+          /> */}
+          <svg
+            width="245"
+            height="176"
+            viewBox="0 0 245 176"
+            fill="none"
+            className="h-full w-full"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M71.113 106.109C99.2938 95.9308 129.854 110.696 139.378 139.125C148.902 167.554 179.462 182.319 207.643 172.141C235.823 161.963 250.956 130.675 241.438 102.265C231.915 73.8358 201.354 59.0705 173.174 69.2483C144.993 79.4261 114.426 64.6426 104.909 36.2321C95.3912 7.82156 64.8246 -6.96193 36.6439 3.21586C8.46311 13.3936 -6.67548 44.6636 2.84816 73.0924C12.3657 101.503 42.9323 116.286 71.113 106.109Z"
+              className="fill-black dark:fill-mycolors-white"
+            />
+          </svg>
         </div>
 
         {/* RICH TEXT DESCRIPTION AND CTA BUTTON */}
@@ -59,6 +74,33 @@ const About: FC<AboutProps> = ({ slice }) => {
               </div>
             </Link>
           </Button>
+        </div>
+      </div>
+    </Bounded>
+  ) : (
+    <Bounded
+      data-slice-type={slice.slice_type}
+      data-slice-variation={slice.variation}
+      className={cn(
+        "mb-16 mt-36 flex h-full flex-col place-items-center justify-center",
+      )}
+    >
+      <div className="grid grid-cols-1 gap-y-4">
+        {/* SECTION CONTENT */}
+        <div className="flex flex-col gap-y-8">
+          {/* SECTION TITLE with border */}
+          <div className="flex w-full justify-between border-b border-mycolors-dark-grey pb-3">
+            <div className="flex gap-x-2">
+              {/* WIP ADD ICON */}
+              <h3 className="text-[16px]">{slice.primary.about_title}</h3>
+            </div>
+            <span className="">Lorem Ipsum</span>
+          </div>
+          <div className="">
+            <CSSLineReveal textClass="text-5xl xl:text-7xl">
+              {slice.primary.about_content}
+            </CSSLineReveal>
+          </div>
         </div>
       </div>
     </Bounded>
