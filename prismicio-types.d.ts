@@ -168,6 +168,21 @@ export type BlogPostDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Footer → Inner pages*
+ */
+export interface FooterDocumentDataInnerPagesItem {
+  /**
+   * page title field in *Footer → Inner pages*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.inner_pages[].page_title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  page_title: prismic.KeyTextField;
+}
+
+/**
  * Item in *Footer → Social Links*
  */
 export interface FooterDocumentDataSocialLinksItem {
@@ -200,37 +215,6 @@ export interface FooterDocumentDataSocialLinksItem {
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
   social_url: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
-  >;
-}
-
-/**
- * Item in *Footer → Inner pages*
- */
-export interface FooterDocumentDataInnerPagesItem {
-  /**
-   * Page Title field in *Footer → Inner pages*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.inner_pages[].page_title
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  page_title: prismic.KeyTextField;
-
-  /**
-   * Page Link field in *Footer → Inner pages*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: footer.inner_pages[].page_link
-   * - **Documentation**: https://prismic.io/docs/fields/link
-   */
-  page_link: prismic.LinkField<
     string,
     string,
     unknown,
@@ -277,6 +261,17 @@ interface FooterDocumentData {
   description: prismic.KeyTextField;
 
   /**
+   * Inner pages field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.inner_pages[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  inner_pages: prismic.GroupField<Simplify<FooterDocumentDataInnerPagesItem>>;
+
+  /**
    * Social Links field in *Footer*
    *
    * - **Field Type**: Group
@@ -288,15 +283,26 @@ interface FooterDocumentData {
   social_links: prismic.GroupField<Simplify<FooterDocumentDataSocialLinksItem>>;
 
   /**
-   * Inner pages field in *Footer*
+   * Email Address field in *Footer*
    *
-   * - **Field Type**: Group
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: footer.inner_pages[]
+   * - **API ID Path**: footer.email_address
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   * - **Documentation**: https://prismic.io/docs/fields/text
    */
-  inner_pages: prismic.GroupField<Simplify<FooterDocumentDataInnerPagesItem>>;
+  email_address: prismic.KeyTextField;
+
+  /**
+   * Phone Number field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.phone_number
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  phone_number: prismic.KeyTextField;
 }
 
 /**
@@ -2284,8 +2290,8 @@ declare module "@prismicio/client" {
       BlogPostDocumentDataSlicesSlice,
       FooterDocument,
       FooterDocumentData,
-      FooterDocumentDataSocialLinksItem,
       FooterDocumentDataInnerPagesItem,
+      FooterDocumentDataSocialLinksItem,
       HeaderDocument,
       HeaderDocumentData,
       HomeDocument,

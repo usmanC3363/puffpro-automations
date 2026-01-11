@@ -14,27 +14,19 @@ type Props = {
 export default async function HeaderContent({ newdata }: Props) {
   return (
     <header
-      className={`${paddingClass} grid h-[7.5rem] min-w-full grid-cols-[1fr_4rem] items-center justify-between lg:grid-cols-[10rem_1fr]`}
+      className={`${paddingClass} grid h-[6rem] min-w-full grid-cols-[1fr_4rem] items-center justify-between lg:grid-cols-[10rem_1fr]`}
     >
       {/* LOGO or HomePage Link */}
-      <div className="relative flex h-fit w-fit items-center">
-        <Link
-          href="/"
-          aria-label="Home Button"
-          className="flex w-fit flex-col justify-center gap-[3px]"
-        >
+      <div className="relative flex h-full w-[130px] items-center">
+        <Link href="/" aria-label="Home Button" className="">
           <PrismicNextImage
             field={newdata.logo_image}
-            className="h-full w-full object-contain object-center"
+            className="h-full w-[130px] object-cover object-center"
           />
         </Link>
       </div>
 
       <Menu extraClass="" pageName="header" />
-
-      {/* <div className="justify-self-center max-lg:hidden">
-        <Button className="font-semibold">{newdata.cta_title}</Button>
-      </div> */}
     </header>
   );
 }

@@ -23,9 +23,9 @@ export default function HeaderShell({
 
   return (
     <div
-      className={`fixed left-0 top-0 z-50 w-full border-b border-mycolors-white transition-all duration-200 ease-linear ${
+      className={`fixed left-0 top-0 z-50 w-full border-b border-current transition-all duration-200 ease-linear ${
         scrollUp
-          ? "translate-y-0 bg-mycolors-black/50 backdrop-blur-[10px]"
+          ? "translate-y-0 bg-mycolors-white/50 backdrop-blur-[10px] dark:bg-mycolors-black/50"
           : "-translate-y-full"
       }`}
     >

@@ -28,6 +28,22 @@
           "placeholder": ""
         }
       },
+      "inner_pages": {
+        "type": "Group",
+        "config": {
+          "label": "Inner pages",
+          "repeat": true,
+          "fields": {
+            "page_title": {
+              "type": "Text",
+              "config": {
+                "label": "page title",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
       "social_links": {
         "type": "Group",
         "config": {
@@ -63,31 +79,18 @@
           }
         }
       },
-      "inner_pages": {
-        "type": "Group",
+      "email_address": {
+        "type": "Text",
         "config": {
-          "label": "Inner pages",
-          "repeat": true,
-          "fields": {
-            "page_title": {
-              "type": "Text",
-              "config": {
-                "label": "Page Title",
-                "placeholder": ""
-              }
-            },
-            "page_link": {
-              "type": "Link",
-              "config": {
-                "label": "Page Link",
-                "placeholder": "",
-                "select": null,
-                "allowTargetBlank": true,
-                "allowText": true,
-                "repeat": false
-              }
-            }
-          }
+          "label": "Email Address",
+          "placeholder": ""
+        }
+      },
+      "phone_number": {
+        "type": "Text",
+        "config": {
+          "label": "Phone Number",
+          "placeholder": ""
         }
       }
     }
