@@ -775,9 +775,47 @@ export type AboutSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *About → secondAbout → Primary*
+ */
+export interface AboutSliceSecondAboutPrimary {
+  /**
+   * About Title field in *About → secondAbout → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.secondAbout.primary.about_title
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  about_title: prismic.KeyTextField;
+
+  /**
+   * About Content field in *About → secondAbout → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.secondAbout.primary.about_content
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  about_content: prismic.KeyTextField;
+}
+
+/**
+ * secondAbout variation for About Slice
+ *
+ * - **API ID**: `secondAbout`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AboutSliceSecondAbout = prismic.SharedSliceVariation<
+  "secondAbout",
+  Simplify<AboutSliceSecondAboutPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *About*
  */
-type AboutSliceVariation = AboutSliceDefault;
+type AboutSliceVariation = AboutSliceDefault | AboutSliceSecondAbout;
 
 /**
  * About Shared Slice
@@ -2306,8 +2344,10 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       AboutSlice,
       AboutSliceDefaultPrimary,
+      AboutSliceSecondAboutPrimary,
       AboutSliceVariation,
       AboutSliceDefault,
+      AboutSliceSecondAbout,
       BenefitsSlice,
       BenefitsSliceDefaultPrimaryBenefitsDataItem,
       BenefitsSliceDefaultPrimary,
