@@ -45,7 +45,7 @@ const SectionContent: FC<SectionContentProps> = ({ slice }) => {
             </CSSLineReveal>
           </div>
         </div>
-        <div className="flex max-w-[41%] flex-col gap-y-9 justify-self-end text-base font-light leading-[150%]">
+        <div className="flex max-w-[41%] flex-col gap-y-9 justify-self-end text-base font-normal leading-[150%]">
           {slice.primary.section_description.length !== 0 && (
             <MyRichText field={slice.primary.section_description} />
           )}

@@ -75,9 +75,9 @@ export default function NewMenu({ menuLinks }: Props) {
             return (
               <PrismicNextLink field={link_url} key={index}>
                 <button
-                  className={`${isActive ? "" : ""} group h-fit w-fit min-w-20 px-2 font-light transition-all duration-300 ease-in-out hover:opacity-100`}
+                  className={`${isActive ? "" : ""} group h-fit w-fit min-w-20 px-2 font-normal transition-all duration-300 ease-in-out hover:opacity-100`}
                 >
-                  <span className="text-nowrap tracking-wide text-mycolors-white 2xl:text-lg">
+                  <span className="text-nowrap tracking-wide text-current 2xl:text-lg">
                     {link_title}
                   </span>
                 </button>

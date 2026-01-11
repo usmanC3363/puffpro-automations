@@ -23,12 +23,12 @@ const ComplainceBadges: FC<ComplainceBadgesProps> = ({ slice }) => {
         `my-12 flex h-full w-screen flex-col place-items-center justify-center gap-y-8 xl:px-[60px]`,
       )}
     >
-      <div className="grid w-full max-w-4xl grid-cols-2 gap-x-6 gap-y-16 md:grid-cols-4 xl:justify-items-center xl:place-self-center 2xl:max-w-6xl 2xl:gap-x-0">
+      <div className="grid w-full max-w-4xl grid-cols-2 gap-y-16 md:grid-cols-[auto_auto_auto_auto_auto] xl:justify-items-center xl:place-self-center 2xl:max-w-6xl 2xl:gap-x-0">
         {slice.primary.badges.map((badge, index) => (
-          <div key={index} className="relative w-32 place-self-center 2xl:w-36">
+          <div key={index} className="relative w-24 place-self-center 2xl:w-36">
             <PrismicNextImage
               field={badge.badge}
-              className="dark:grayscale-20 h-fit w-full object-cover"
+              className="h-fit w-full object-cover"
             />
           </div>
         ))}

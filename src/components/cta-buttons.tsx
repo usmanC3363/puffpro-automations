@@ -27,7 +27,9 @@ export const CtaButtons = ({ className }: CtaButtonsProps) => {
           >
             See Demo
           </Badge>
-          <Phone className="size-7 transition-all duration-150 ease-linear group-hover:scale-125" />
+          <div className="flex size-10 flex-col items-center justify-center rounded-full border border-current">
+            <Phone className="size-7 transition-all duration-150 ease-linear group-hover:scale-125" />
+          </div>
         </Button>
       </Link>
       <Link

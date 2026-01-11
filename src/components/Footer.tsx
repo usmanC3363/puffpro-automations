@@ -4,7 +4,6 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { paddingClass } from "@/app/utils/constants";
 import CSSLineReveal from "./helper/CssLineReveal";
 
-// import { PrismicLink } from "@prismicio/react";
 
 export default async function Footer() {
   const client = createClient();
@@ -17,8 +16,7 @@ export default async function Footer() {
       {/* Main Grid */}
 
       <div className="grid h-fit w-full max-w-full gap-y-7 md:grid-cols-[1fr_1fr] md:gap-x-[10%] lg:h-[80%] lg:justify-between lg:gap-x-[8%] xl:grid-cols-[4fr_5fr] xl:justify-items-center xl:gap-x-[15%] xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-10 3xl:max-w-screen-2xl max-sm:h-full max-md:grid-rows-[2fr_3fr]">
-        {/* Description Flex */}
-
+        {/* Logo and Description Flex */}
         <div className="flex h-full w-full flex-col justify-between lg:min-h-[29rem]">
           <div className="flex h-full w-full flex-col gap-y-10">
             <div className="relative w-full">
@@ -41,43 +39,41 @@ export default async function Footer() {
         {/* Second column Container */}
         <div className="flex flex-col justify-between font-normal text-mycolors-white max-lg:gap-y-10">
           <div className="grid gap-x-10 gap-y-14 lg:grid-cols-[1fr_1fr_3fr] xl:gap-x-14 max-lg:grid-cols-2">
-            {/* First Inner Page loop 1-3 */}
+            {/* 1st Inner Page loop */}
             <div className="flex w-fit flex-col gap-y-2">
               {footer.data.inner_pages.map((innerPage, index) => (
-                <PrismicNextLink
-                  className="fade-up"
-                  field={innerPage.page_link}
+                // <PrismicNextLink
+                //   className="fade-up"
+                //   field={innerPage.page_link}
+                //   key={index}
+                //   style={{
+                //     transitionDelay: `${150 + index * 120}ms`,
+                //   }}
+                // >
+                <span
+                  className="text-nowrap text-[18px] leading-[133%]"
                   key={index}
                   style={{
                     transitionDelay: `${150 + index * 120}ms`,
                   }}
                 >
-                  <span className="text-nowrap text-[18px] leading-[133%]">
-                    {innerPage.page_title}
-                  </span>
-                </PrismicNextLink>
+                  {innerPage.page_title}
+                </span>
+                // </PrismicNextLink>
               ))}
             </div>
 
-            {/* Second List */}
+            {/* 2nd contact details */}
             <div className="flex w-fit flex-col gap-y-2">
-              {footer.data.inner_pages.map((innerPage, index) => (
-                <PrismicNextLink
-                  className="fade-up"
-                  field={innerPage.page_link}
-                  key={index}
-                  style={{
-                    transitionDelay: `${150 + index * 120}ms`,
-                  }}
-                >
-                  <span className="text-nowrap text-[18px] leading-[133%]">
-                    {innerPage.page_title}
-                  </span>
-                </PrismicNextLink>
-              ))}
+              <span className="text-nowrap text-[18px] leading-[133%]">
+                {footer.data.phone_number}
+              </span>
+              <span className="text-nowrap text-[18px] leading-[133%]">
+                {footer.data.email_address}
+              </span>
             </div>
 
-            {/* Social Links  */}
+            {/* 3rd Social Links  */}
             <div className="flex w-fit flex-col gap-2">
               {footer.data.social_links.map((social, index) => (
                 <PrismicNextLink
