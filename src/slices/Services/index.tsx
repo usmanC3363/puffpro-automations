@@ -55,7 +55,7 @@ const Services: FC<ServicesProps> = ({ slice }) => {
                 <div
                   className={`flex flex-col gap-y-8 ${iscardimgonleft ? "" : "pl-28"} `}
                 >
-                  <CSSLineReveal textClass="font-light text-[16px] tracking-wide text-mycolors-grey leading-[150%]">
+                  <CSSLineReveal textClass="font-normal text-[16px] tracking-wide text-mycolors-dark-grey dark:text-mycolors-grey leading-[150%]">
                     {service_description}
                   </CSSLineReveal>
                   <MyRichText

@@ -79,7 +79,7 @@ const Pricing: FC<PricingProps> = ({ slice }) => {
                           ? `$${monthly_price}`
                           : `$${annual_price}`}
                       {!isEnterprise && (
-                        <span className="ml-1 text-[16px] font-light">
+                        <span className="ml-1 text-[16px] font-normal">
                           /{isMonthly ? "Month" : "Year"}
                         </span>
                       )}
@@ -91,12 +91,12 @@ const Pricing: FC<PricingProps> = ({ slice }) => {
                       {plan_title} Plan
                     </p>
 
-                    <p className="text-[16px] text-mycolors-grey max-1.5xl:min-h-12">
+                    <p className="text-[16px] text-mycolors-dark-grey dark:text-mycolors-grey max-1.5xl:min-h-12">
                       {/* PLAN DESCRIPTION */}
                       {plan_description}
                     </p>
 
-                    <span className="font-light">
+                    <span className="">
                       {/* SETUP_FEE */}
                       <span className="font-normal">Setup Fee:</span>{" "}
                       {setup_fee}

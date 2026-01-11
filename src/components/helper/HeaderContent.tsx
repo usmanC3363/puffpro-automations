@@ -6,6 +6,7 @@ import Menu from "../Menu";
 import { HeaderDocumentData } from "@/../prismicio-types";
 import { PrismicNextImage } from "@prismicio/next";
 import { Button } from "../ui/button";
+import { LogoSvg } from "../logo-svg";
 
 type Props = {
   newdata: HeaderDocumentData;
@@ -19,10 +20,7 @@ export default async function HeaderContent({ newdata }: Props) {
       {/* LOGO or HomePage Link */}
       <div className="relative flex h-full w-[130px] items-center">
         <Link href="/" aria-label="Home Button" className="">
-          <PrismicNextImage
-            field={newdata.logo_image}
-            className="h-full w-[130px] object-cover object-center"
-          />
+          <LogoSvg />
         </Link>
       </div>
 

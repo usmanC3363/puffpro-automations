@@ -4,14 +4,13 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { paddingClass } from "@/app/utils/constants";
 import CSSLineReveal from "./helper/CssLineReveal";
 
-
 export default async function Footer() {
   const client = createClient();
   const footer = await client.getSingle("footer");
   return (
     // Flex Container
     <footer
-      className={`${paddingClass} flex h-full flex-col items-center justify-end border-t border-mycolors-white px-4 pb-10 pt-14`}
+      className={`${paddingClass} flex h-full flex-col items-center justify-end border-t border-current px-4 pb-10 pt-14`}
     >
       {/* Main Grid */}
 
@@ -25,21 +24,21 @@ export default async function Footer() {
                 className="h-full object-cover"
               />
             </div>
-            <span className="text-[24px] font-normal text-mycolors-grey">
+            <span className="text-[24px] font-normal text-mycolors-dark-grey dark:text-mycolors-grey">
               {footer.data.description}
             </span>
           </div>
 
           <span className="text-[14px] font-normal tracking-wide">
             ©2025 PuffproAutomations, All Rights Reserved.
-            {/* {footer.data.} */}
           </span>
         </div>
 
         {/* Second column Container */}
-        <div className="flex flex-col justify-between font-normal text-mycolors-white max-lg:gap-y-10">
+        <div className="flex flex-col justify-between font-normal max-lg:gap-y-10">
           <div className="grid gap-x-10 gap-y-14 lg:grid-cols-[1fr_1fr_3fr] xl:gap-x-14 max-lg:grid-cols-2">
             {/* 1st Inner Page loop */}
+
             <div className="flex w-fit flex-col gap-y-2">
               {footer.data.inner_pages.map((innerPage, index) => (
                 // <PrismicNextLink
@@ -97,7 +96,7 @@ export default async function Footer() {
             <span className="fade-up text-[18px]">
               Sign up for our newsletter
             </span>
-            <div className="flex items-center border-b border-[#ccc]">
+            <div className="flex items-center border-b border-current">
               <input
                 type="email"
                 placeholder="Type Your Email Address"
