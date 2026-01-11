@@ -1,9 +1,5 @@
-import { Button } from "./ui/button";
-import Link from "next/link";
-import { Phone } from "lucide-react";
-import { Badge } from "./ui/badge";
-import { SlCalender } from "react-icons/sl";
 import { ModeToggle } from "./helper/mode-toggle";
+import { BookCallDialog } from "./book-call-dialog";
 
 interface CtaButtonsProps {
   className?: string;
@@ -11,41 +7,16 @@ interface CtaButtonsProps {
 
 export const CtaButtons = ({ className }: CtaButtonsProps) => {
   return (
-    <div className="fixed bottom-8 right-6 flex min-w-40 flex-col items-end gap-y-3">
+    <div className="fixed bottom-6 right-4 flex min-w-40 flex-col items-end gap-y-3.5">
       {/* WIP */}
-      <div className="">
-        <ModeToggle />
+      <div className="group relative">
+        <ModeToggle className="" />
+        <span className="absolute -left-[100%] bottom-2 scale-0 text-nowrap rounded border border-current bg-background px-2 py-px text-[13px] font-normal opacity-0 transition-all duration-200 ease-linear group-hover:-translate-x-[5rem] group-hover:scale-100 group-hover:opacity-100">
+          switch theme
+        </span>
       </div>
-      <Link
-        href="/contact"
-        className="group flex items-center gap-x-2 rounded-lg shadow-xl"
-      >
-        <Button className="max-w-fit">
-          <Badge
-            variant={"custom"}
-            className="absolute translate-x-0 text-base font-normal opacity-0 transition-all duration-150 ease-linear group-hover:-translate-x-[5.5rem] group-hover:scale-x-100 group-hover:opacity-100"
-          >
-            See Demo
-          </Badge>
-          <div className="flex size-10 flex-col items-center justify-center rounded-full border border-current">
-            <Phone className="size-7 transition-all duration-150 ease-linear group-hover:scale-125" />
-          </div>
-        </Button>
-      </Link>
-      <Link
-        href="/contact"
-        className="group flex items-center gap-x-2 rounded-lg shadow-xl"
-      >
-        <Button className="max-w-fit" variant="outline">
-          <Badge
-            variant={"custom"}
-            className="absolute translate-x-0 text-base font-normal opacity-0 transition-all duration-150 ease-linear group-hover:-translate-x-[5.5rem] group-hover:scale-x-100 group-hover:opacity-100"
-          >
-            Book a Call
-          </Badge>
-          <SlCalender className="size-7" />
-        </Button>
-      </Link>
+
+      <BookCallDialog />
     </div>
   );
 };
