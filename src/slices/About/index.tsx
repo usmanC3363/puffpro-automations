@@ -1,14 +1,14 @@
+"use client";
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Bounded from "@/components/helper/Bounded";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { MyRichText } from "@/components/helper/rich-text";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Arrow } from "@/components/helper/Arrow";
 import { cn } from "@/lib/utils";
-import CSSLineReveal from "@/components/helper/CssLineReveal";
+import { ScrollParagraphs } from "@/components/scroll-paragraphs";
 
 /**
  * Props for `About`.
@@ -82,7 +82,7 @@ const About: FC<AboutProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={cn(
-        "mb-16 mt-36 flex h-full flex-col place-items-center justify-center",
+        "my-[6.5rem] flex h-full flex-col place-items-center justify-center",
       )}
     >
       <div className="grid grid-cols-1 gap-y-4">
@@ -96,12 +96,11 @@ const About: FC<AboutProps> = ({ slice }) => {
             </div>
             <span className="">Lorem Ipsum</span>
           </div>
-          <div className="">
-            <CSSLineReveal textClass="text-5xl xl:text-7xl">
-              {slice.primary.about_content}
-            </CSSLineReveal>
-          </div>
         </div>
+        <ScrollParagraphs
+          content_1={slice.primary.about_content_1}
+          content_2={slice.primary.about_content_2}
+        />
       </div>
     </Bounded>
   );
