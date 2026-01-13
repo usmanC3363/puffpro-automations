@@ -441,6 +441,7 @@ export type HeaderDocument<Lang extends string = string> =
   >;
 
 type HomeDocumentDataSlicesSlice =
+  | ContactFormSlice
   | AboutSlice
   | ComplainceBadgesSlice
   | CtaSlice
@@ -789,14 +790,24 @@ export interface AboutSliceSecondAboutPrimary {
   about_title: prismic.KeyTextField;
 
   /**
-   * About Content field in *About → secondAbout → Primary*
+   * About Content 1 field in *About → secondAbout → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about.secondAbout.primary.about_content
+   * - **API ID Path**: about.secondAbout.primary.about_content_1
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
-  about_content: prismic.KeyTextField;
+  about_content_1: prismic.KeyTextField;
+
+  /**
+   * About Content 2 field in *About → secondAbout → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.secondAbout.primary.about_content_2
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  about_content_2: prismic.KeyTextField;
 }
 
 /**

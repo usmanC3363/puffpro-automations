@@ -63,10 +63,17 @@
             "placeholder": ""
           }
         },
-        "about_content": {
+        "about_content_1": {
           "type": "Text",
           "config": {
-            "label": "About Content",
+            "label": "About Content 1",
+            "placeholder": ""
+          }
+        },
+        "about_content_2": {
+          "type": "Text",
+          "config": {
+            "label": "About Content 2",
             "placeholder": ""
           }
         }
