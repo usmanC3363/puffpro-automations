@@ -10,7 +10,7 @@ interface CtaButtonsProps {
 
 export const CtaButtons = ({ className }: CtaButtonsProps) => {
   return (
-    <div className="fixed bottom-6 right-4 flex min-w-40 flex-col items-end gap-y-3.5">
+    <div className="fixed bottom-6 right-4 flex min-w-40 flex-col items-end gap-y-3">
       {/* WIP */}
       <div className="group relative">
         <ModeToggle className="" />

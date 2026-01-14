@@ -1,9 +1,16 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { MainArrow, LinkArrow, BulletArrow, Plus, Minus } from "./icons";
+import {
+  MainArrow,
+  LinkArrow,
+  BulletArrow,
+  Plus,
+  Minus,
+  SectionArrow,
+} from "./icons";
 
-type ArrowName = "main" | "link" | "bullet" | "plus" | "minus";
+type ArrowName = "main" | "link" | "bullet" | "plus" | "minus" | "section";
 type ArrowPosition = "right" | "left" | "topright" | "bottomleft";
 
 interface ArrowProps {
@@ -27,6 +34,7 @@ const ICONS: Record<ArrowName, React.FC<{ className?: string }>> = {
   bullet: BulletArrow,
   plus: Plus,
   minus: Minus,
+  section: SectionArrow,
 };
 
 export const Arrow = ({

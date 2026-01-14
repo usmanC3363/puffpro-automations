@@ -4,9 +4,6 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Bounded from "@/components/helper/Bounded";
 import { MyRichText } from "@/components/helper/rich-text";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { Arrow } from "@/components/helper/Arrow";
 import { cn } from "@/lib/utils";
 import { ScrollParagraphs } from "@/components/scroll-paragraphs";
 import { ContactButton } from "@/components/cta-buttons";
@@ -26,12 +23,14 @@ const About: FC<AboutProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="my-20 flex h-full max-h-full w-screen flex-col place-items-center justify-center gap-y-16"
     >
-      <h1 className="text-[60px] font-medium">{slice.primary.about_heading}</h1>
+      <h1 className="text-[36px] font-medium leading-[120%] xs:text-[48px] sm:text-[60px]">
+        {slice.primary.about_heading}
+      </h1>
 
       {/* IMAGE AND DESCRIPTION GRID */}
       <div className="relative grid h-full w-full grid-cols-1 gap-x-16 gap-y-14 lg:grid-cols-[33rem_auto] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
         <div
-          className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} flex h-full flex-col items-center`}
+          className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} flex h-full flex-col items-center justify-center`}
         >
           {/* <PrismicNextImage
             field={slice.primary.about_image}
@@ -43,9 +42,17 @@ const About: FC<AboutProps> = ({ slice }) => {
             height="176"
             viewBox="0 0 245 176"
             fill="none"
-            className="h-full w-full"
+            className="h-[70%] w-full"
             xmlns="http://www.w3.org/2000/svg"
           >
+            {/* <svg
+            width="245"
+            height="176"
+            viewBox="0 0 245 176"
+            fill="none"
+            className="-z-10 ml-[120%] h-[100%] w-full scale-[2.15]"
+            xmlns="http://www.w3.org/2000/svg"
+          > */}
             <path
               d="M71.113 106.109C99.2938 95.9308 129.854 110.696 139.378 139.125C148.902 167.554 179.462 182.319 207.643 172.141C235.823 161.963 250.956 130.675 241.438 102.265C231.915 73.8358 201.354 59.0705 173.174 69.2483C144.993 79.4261 114.426 64.6426 104.909 36.2321C95.3912 7.82156 64.8246 -6.96193 36.6439 3.21586C8.46311 13.3936 -6.67548 44.6636 2.84816 73.0924C12.3657 101.503 42.9323 116.286 71.113 106.109Z"
               className="fill-black dark:fill-mycolors-white"
@@ -61,7 +68,7 @@ const About: FC<AboutProps> = ({ slice }) => {
             field={slice.primary.about_content}
             components={{
               paragraph: ({ children }) => (
-                <p className="text-[23px] font-normal leading-[150%] text-mycolors-black/85 dark:text-mycolors-grey">
+                <p className="text-[17px] font-normal leading-[150%] text-mycolors-black/85 dark:text-mycolors-grey xs:text-[20px] sm:text-[23px]">
                   {children}
                 </p>
               ),

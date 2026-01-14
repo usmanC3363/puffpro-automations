@@ -12,7 +12,8 @@ module.exports = {
   ],
   theme: {
     screens: {
-      xs: "420px",
+      // Min-width breakpoints (default behavior)
+      xs: "410px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
@@ -21,33 +22,31 @@ module.exports = {
       "2xl": "1536px",
       "3xl": "1920px",
       "4xl": "2560px",
-      "max-xs": {
-        max: "420px",
-      },
-      "max-sm": {
-        max: "640px",
-      },
-      "max-md": {
-        max: "768px",
-      },
-      "max-lg": {
-        max: "1024px",
-      },
-      "max-xl": {
-        max: "1280px",
-      },
-      "max-1.5xl": {
-        max: "1366px",
-      },
-      "max-2xl": {
-        max: "1536px",
-      },
-      "max-3xl": {
-        max: "1920px",
-      },
-      "max-4xl": {
-        max: "2560px",
-      },
+
+      // contained breakpoints
+
+      "s-xs": { min: "1px", max: "409px" },
+      "s-sm": { min: "1px", max: "639px" },
+      "xs-sm": { min: "410px", max: "639px" },
+      "sm-md": { min: "640px", max: "767px" },
+      "md-lg": { min: "768px", max: "1023px" },
+      "sm-lg": { min: "640px", max: "1023px" },
+      "lg-xl": { min: "1024px", max: "1279px" },
+      "lg-1.5xl": { min: "1024px", max: "1366px" },
+      "md-2xl": { min: "768px", max: "1535px" },
+      "lg-2xl": { min: "1024px", max: "1535px" },
+      "xl-2xl": { min: "1280px", max: "1535px" },
+
+      // Max-width breakpoints (reverse approach)
+      "max-xs": { max: "410px" }, // For devices smaller than 450px, small mobiles iphones
+      "max-sm": { max: "640px" }, // For devices smaller than 640px
+      "max-md": { max: "768px" }, // For devices smaller than 768px
+      "max-lg": { max: "1024px" }, // For devices smaller than 1024px
+      "max-xl": { max: "1280px" }, // For devices smaller than 1280px
+      "max-1.5xl": { max: "1366px" }, // For devices smaller than 1366px
+      "max-2xl": { max: "1536px" }, // For devices smaller than 1536px
+      "max-3xl": { max: "1920px" }, // For devices smaller than 1920px
+      "max-4xl": { max: "2560px" }, // For devices smaller than 2560px
     },
     extend: {
       grayscale: {
