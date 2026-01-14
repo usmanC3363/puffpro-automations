@@ -102,6 +102,7 @@ export default function ContactForum({
 
       <Input
         name="name"
+        className="border border-muted-foreground/30"
         placeholder="Your Name"
         value={form.name}
         onChange={handleChange}
@@ -109,6 +110,7 @@ export default function ContactForum({
       />
       <Input
         name="email"
+        className="border border-muted-foreground/30"
         placeholder="Your Email"
         type="email"
         value={form.email}
@@ -117,6 +119,7 @@ export default function ContactForum({
       />
       <Input
         name="phone"
+        className="border border-muted-foreground/30"
         placeholder="Phone (optional)"
         type="tel"
         value={form.phone}
@@ -124,6 +127,7 @@ export default function ContactForum({
       />
       <Input
         name="plan"
+        className="border border-muted-foreground/30"
         placeholder="Plan of Interest"
         value={form.plan}
         onChange={handleChange}
@@ -143,14 +147,14 @@ export default function ContactForum({
             min={minDate}
             value={form.date}
             onChange={handleChange}
-            className=""
+            className="border border-muted-foreground/30"
           />
           <Input
             name="time"
             type="time"
             value={form.time}
             onChange={handleChange}
-            className=""
+            className="border border-muted-foreground/30"
           />
         </div>
       </div>
@@ -160,6 +164,7 @@ export default function ContactForum({
         placeholder="Optional Message"
         value={form.message}
         onChange={handleChange}
+        className="border border-muted-foreground/30"
       />
 
       <Button

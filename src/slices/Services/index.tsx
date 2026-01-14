@@ -50,13 +50,13 @@ const Services: FC<ServicesProps> = ({ slice }) => {
               <div
                 className={`${iscardimgonleft ? "md:order-2" : "md:order-1"} flex flex-col gap-y-6`}
               >
-                <CSSLineReveal textClass="text-[40px] leading-[130%] font-medium max-w-[90%] line-clamp-2">
+                <CSSLineReveal textClass="text-[28px] xs:text-[32px] sm:text-[40px] leading-[130%] font-medium max-w-[90%] line-clamp-2">
                   {service_title}
                 </CSSLineReveal>
                 <div
                   className={`flex flex-col gap-y-8 ${iscardimgonleft ? "" : "md:pl-28"} `}
                 >
-                  <CSSLineReveal textClass="font-normal max-w-[70vw] text-[16px] tracking-wide text-mycolors-dark-grey dark:text-mycolors-grey leading-[150%]">
+                  <CSSLineReveal textClass="font-normal max-w-[85vw] xs:max-w-[70vw] text-[16px] tracking-wide text-mycolors-dark-grey dark:text-mycolors-grey leading-[150%]">
                     {service_description}
                   </CSSLineReveal>
                   <MyRichText
@@ -66,7 +66,7 @@ const Services: FC<ServicesProps> = ({ slice }) => {
                         <ul className="list-none space-y-4">{children}</ul>
                       ),
                       listItem: ({ children }) => (
-                        <li className="flex items-center gap-x-3 text-base font-normal">
+                        <li className="flex items-center gap-x-3 text-[16px] font-normal">
                           <Arrow name="bullet" />
                           {children}
                         </li>

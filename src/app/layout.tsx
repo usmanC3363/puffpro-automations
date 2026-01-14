@@ -9,6 +9,7 @@ import { CtaButtons } from "@/components/cta-buttons";
 import InViewObserver from "@/components/helper/InViewObserver";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/helper/theme-provider";
+import LenisWrapper from "@/components/helper/lenis-wrapper";
 
 const aeonik = localFont({
   variable: "--font-aeonik",
@@ -70,7 +71,7 @@ export default function RootLayout({
 
           <div className="mt-28">
             <InViewObserver />
-            {children}
+            <LenisWrapper>{children}</LenisWrapper>
             <Toaster />
           </div>
           <Footer />

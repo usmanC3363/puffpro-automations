@@ -21,7 +21,7 @@ export const ScrollParagraphs = ({
   });
 
   const p1Progress = useTransform(scrollYProgress, [0, 0.5], [0, 1.25]);
-  const p2Progress = useTransform(scrollYProgress, [0.5, 1], [0, 1.5]);
+  const p2Progress = useTransform(scrollYProgress, [0.5, 1], [0, 1.95]);
   return (
     <div ref={containerRef} className="min-w-full">
       <ScrollHighlightText
