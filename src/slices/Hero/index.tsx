@@ -21,15 +21,15 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="flex h-full w-screen flex-col justify-center gap-y-20 py-24"
+      className="flex h-full w-screen flex-col justify-center gap-y-10 py-24 md:gap-y-20"
     >
       {/* Top Text Block */}
-      <div className="flex flex-col items-center gap-2 text-center">
+      <div className="flex flex-col items-center gap-y-7 text-center md:gap-2">
         {/* Heading */}
-        <CSSLineReveal textClass="text-[40px] capitalize">
+        <CSSLineReveal textClass="text-[32px] md:text-[40px] capitalize">
           {slice.primary.heading_1}
         </CSSLineReveal>
-        <CSSLineReveal textClass="text-[120px] leading-none font-medium uppercase">
+        <CSSLineReveal textClass="text-[80px] md:text-[100px] md:text-[120px] leading-[115%] md:leading-none font-medium uppercase">
           {slice.primary.heading_2}
         </CSSLineReveal>
       </div>

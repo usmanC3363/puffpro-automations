@@ -35,7 +35,7 @@ export const isDarkColor = (bgColor) => {
   return luminance <= 0.5;
 };
 
-export const paddingClass = "px-[24px] lg:px-[44px] xl:px-[80px] 2xl:px-8";
+export const paddingClass = "px-[24px] lg:px-[44px] xl:px-[80px]";
 
 export const secHeading = "text-5xl sm:text-6xl  lg:text-7xl  capitalize";
 
