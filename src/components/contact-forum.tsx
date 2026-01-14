@@ -5,8 +5,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
-export default function ContactForum() {
+export default function ContactForum({
+  className,
+  label = false,
+}: {
+  className?: string;
+  label?: Boolean;
+}) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -82,9 +89,16 @@ export default function ContactForum() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto w-full max-w-md space-y-5 rounded-lg border border-white/10 p-6 tracking-wide text-mycolors-white shadow-xl backdrop-blur dark:bg-black/60"
+      className={cn(
+        "mx-auto w-full max-w-md space-y-5 rounded-lg border border-white/10 p-6 tracking-wide shadow-xl backdrop-blur dark:bg-black/60",
+        className,
+      )}
     >
-      <h2 className="text-3xl font-medium text-mycolors-white">Get in touch</h2>
+      {label ? (
+        <h2 className="text-3xl font-medium">Get in touch</h2>
+      ) : (
+        <div className="pointer-events-none h-1" />
+      )}
 
       <Input
         name="name"
@@ -129,14 +143,14 @@ export default function ContactForum() {
             min={minDate}
             value={form.date}
             onChange={handleChange}
-            className="focus:border-mycolors-purple focus:ring-mycolors-purple w-1/2 cursor-pointer border-white/20 bg-white/5"
+            className=""
           />
           <Input
             name="time"
             type="time"
             value={form.time}
             onChange={handleChange}
-            className="focus:border-mycolors-purple focus:ring-mycolors-purple w-1/2 cursor-pointer border-white/20 bg-white/5"
+            className=""
           />
         </div>
       </div>
@@ -152,9 +166,9 @@ export default function ContactForum() {
         type="submit"
         variant={"outline"}
         disabled={status === "loading"}
-        className="w-full rounded-sm transition-all duration-150 ease-linear hover:tracking-tight"
+        className="w-full rounded-sm text-current transition-all duration-150 ease-linear hover:tracking-tight"
       >
-        {status === "loading" ? "Sending..." : "Send Messeage"}
+        {status === "loading" ? "Sending..." : "Send Message"}
       </Button>
     </form>
   );

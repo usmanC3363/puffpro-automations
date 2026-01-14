@@ -9,6 +9,7 @@ import { MyRichText } from "@/components/helper/rich-text";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Arrow } from "@/components/helper/Arrow";
+import { ContactButton } from "@/components/cta-buttons";
 
 /**
  * Props for `SectionContent`.
@@ -28,9 +29,11 @@ const SectionContent: FC<SectionContentProps> = ({ slice }) => {
         "mb-16 mt-36 flex h-full flex-col place-items-center justify-center",
       )}
     >
-      <div className="grid grid-cols-1 gap-y-4">
+      <div
+        className={`grid w-full grid-cols-1 gap-y-10 ${slice.primary.section_description.length === 0 && "gap-y-16"}`}
+      >
         {/* SECTION CONTENT */}
-        <div className="flex flex-col gap-y-8">
+        <div className={`flex flex-col gap-y-8`}>
           {/* SECTION TITLE with border */}
           <div className="flex w-full justify-between border-b border-mycolors-dark-grey pb-3">
             <div className="flex gap-x-2">
@@ -39,24 +42,19 @@ const SectionContent: FC<SectionContentProps> = ({ slice }) => {
             </div>
             <span className="">Lorem Ipsum</span>
           </div>
+          {/* HEADING */}
           <div className="">
-            <CSSLineReveal textClass="w-fit max-w-[78%] text-[80px] font-medium capitalize leading-[125%] tracking-[-0.0115em]">
+            <CSSLineReveal textClass="w-fit 1.5xl:max-w-[78%] text-[42px] sm:text-[62px] 1.5xl:text-[80px] font-medium capitalize leading-[125%] tracking-[-0.0115em]">
               {slice.primary.section_heading}
             </CSSLineReveal>
           </div>
         </div>
+        {/* DESCRIPTION */}
         <div className="flex max-w-[41%] flex-col gap-y-9 justify-self-end text-base font-normal leading-[150%]">
           {slice.primary.section_description.length !== 0 && (
             <MyRichText field={slice.primary.section_description} />
           )}
-          <Button asChild variant="outline" className="w-fit">
-            <Link href="/">
-              <span className="pb-0.5 text-base font-normal">Contact Now</span>
-              <div className="flex items-center">
-                <Arrow svgClass="h-full w-full" name="main" />
-              </div>
-            </Link>
-          </Button>
+          <ContactButton />
         </div>
       </div>
     </Bounded>

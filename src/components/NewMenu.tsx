@@ -36,7 +36,7 @@ export default function NewMenu({ menuLinks }: Props) {
             : "w-screen translate-x-full delay-500"
         }`}
       >
-        <div className="flex h-full w-full flex-col justify-center gap-y-24 px-6">
+        <div className="flex h-full w-full flex-col justify-evenly px-6">
           {menuLinks?.map(({ link_title, link_url }, index) => {
             // AsLink for prismic typesafety, doesnt work without it
             const href = asLink(link_url) || "#";
@@ -45,7 +45,7 @@ export default function NewMenu({ menuLinks }: Props) {
             return (
               <PrismicNextLink key={index} field={link_url}>
                 <button
-                  className={`${isActive && ""} flex h-10 w-full max-w-full items-center justify-between border-b-[1.5px] border-black pb-8 dark:border-mycolors-dark-grey ${
+                  className={`${isActive && ""} flex h-full w-full max-w-full items-center justify-between border-b-[1.5px] border-black pb-5 text-[48px] leading-none text-background dark:border-mycolors-dark-grey ${
                     open
                       ? "translate-x-0 transition-all duration-200 ease-linear hover:border-opacity-70 hover:text-opacity-70"
                       : "translate-x-[100%] transition-all duration-500 ease-in-out"
@@ -96,7 +96,7 @@ export default function NewMenu({ menuLinks }: Props) {
       >
         <div
           className={`group flex scale-110 items-center justify-center transition-all duration-300 ease-in-out ${
-            open ? "-translate-x-3 -rotate-180 scale-x-150" : ""
+            open ? "-translate-x-3 -rotate-180 scale-x-150 text-background" : ""
           }`}
         >
           <svg

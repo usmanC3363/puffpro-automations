@@ -10,6 +10,7 @@ import { MyRichText } from "@/components/helper/RichText";
 import { Arrow } from "@/components/helper/Arrow";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ContactButton } from "@/components/cta-buttons";
 
 /**
  * Props for `Services`.
@@ -29,7 +30,7 @@ const Services: FC<ServicesProps> = ({ slice }) => {
         "my-44 flex h-full max-h-full flex-col place-items-center justify-center",
       )}
     >
-      <div className="flex flex-col gap-y-[7.5rem] lg:gap-y-36">
+      <div className="flex flex-col gap-y-4 md:gap-y-[7.5rem] lg:gap-y-32">
         {/* CARDS */}
         {slice.primary.services_data.map(
           (
@@ -44,7 +45,7 @@ const Services: FC<ServicesProps> = ({ slice }) => {
           ) => (
             <div
               key={index}
-              className="grid h-full w-full gap-x-[14%] gap-y-12 lg:grid-cols-[1fr_1fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl"
+              className="grid h-full w-full gap-x-[14%] gap-y-20 lg:grid-cols-[1fr_1fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl"
             >
               <div
                 className={`${iscardimgonleft ? "md:order-2" : "md:order-1"} flex flex-col gap-y-6`}
@@ -53,9 +54,9 @@ const Services: FC<ServicesProps> = ({ slice }) => {
                   {service_title}
                 </CSSLineReveal>
                 <div
-                  className={`flex flex-col gap-y-8 ${iscardimgonleft ? "" : "pl-28"} `}
+                  className={`flex flex-col gap-y-8 ${iscardimgonleft ? "" : "md:pl-28"} `}
                 >
-                  <CSSLineReveal textClass="font-normal text-[16px] tracking-wide text-mycolors-dark-grey dark:text-mycolors-grey leading-[150%]">
+                  <CSSLineReveal textClass="font-normal max-w-[70vw] text-[16px] tracking-wide text-mycolors-dark-grey dark:text-mycolors-grey leading-[150%]">
                     {service_description}
                   </CSSLineReveal>
                   <MyRichText
@@ -72,21 +73,12 @@ const Services: FC<ServicesProps> = ({ slice }) => {
                       ),
                     }}
                   />
-                  <Button asChild variant="outline" className="w-fit">
-                    <Link href="/">
-                      <span className="pb-0.5 text-base font-normal">
-                        Contact Now
-                      </span>
-                      <div className="flex items-center">
-                        <Arrow svgClass="h-full w-full" name="main" />
-                      </div>
-                    </Link>
-                  </Button>
+                  <ContactButton />
                 </div>
               </div>
               {/* SERVICE IMAGE */}
               <div
-                className={`${iscardimgonleft ? "md:order-1" : "md:order-2"} relative h-full w-full`}
+                className={`${iscardimgonleft ? "md:order-1" : "md:order-2"} relative h-full w-full max-md:h-[70%]`}
               >
                 <PrismicNextImage
                   className="h-full w-full object-contain"
@@ -104,7 +96,7 @@ const Services: FC<ServicesProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="my-12 flex h-full flex-col place-items-center justify-center gap-y-8"
     >
-      <div className="flex flex-col gap-y-[7.5rem] lg:gap-y-24">
+      <div className="flex flex-col gap-y-[7.5rem] lg:gap-y-16 1.5xl:gap-y-20">
         {slice.primary.services_data.map(
           (
             {
