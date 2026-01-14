@@ -14,7 +14,7 @@ type Props = {
 };
 
 const COLORS = {
-  darkGrey: "#6B6B6B",
+  darkGrey: "#4C4C4C",
   black: "#191919",
   white: "#ffffff",
   grey: "#C5C5C3",
@@ -38,7 +38,7 @@ export const EachCharacter = ({
   );
 
   // Base colors
-  const startColor = isDark ? COLORS.grey : COLORS.darkGrey;
+  const startColor = isDark ? COLORS.darkGrey : COLORS.darkGrey;
 
   const endColor = isHighlighted
     ? COLORS.blue

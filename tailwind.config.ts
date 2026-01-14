@@ -67,7 +67,7 @@ module.exports = {
           "sec-white": "#EFF3F9",
           grey: "#C5C5C3",
           blue: "#3375F5",
-          "dark-grey": "#636362",
+          "dark-grey": "#4C4C4C",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

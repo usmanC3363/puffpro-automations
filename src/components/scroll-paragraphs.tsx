@@ -20,8 +20,8 @@ export const ScrollParagraphs = ({
     offset: ["start 0.8", "end 0.2"],
   });
 
-  const p1Progress = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-  const p2Progress = useTransform(scrollYProgress, [0.5, 1], [0, 1]);
+  const p1Progress = useTransform(scrollYProgress, [0, 0.5], [0, 1.25]);
+  const p2Progress = useTransform(scrollYProgress, [0.5, 1], [0, 1.5]);
   return (
     <div ref={containerRef} className="min-w-full">
       <ScrollHighlightText

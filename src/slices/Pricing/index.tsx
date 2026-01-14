@@ -57,7 +57,7 @@ const Pricing: FC<PricingProps> = ({ slice }) => {
                 // CARD
                 key={index}
                 style={{ transitionDelay: `${150 + index * 120}ms` }}
-                className={`relative flex min-h-[30rem] w-full flex-col gap-y-5 rounded-2xl border border-mycolors-white pb-6 pt-3 shadow-lg max-lg:max-w-[30rem]`}
+                className={`relative flex min-h-[30rem] w-full flex-col gap-y-5 rounded-2xl border border-muted-foreground/20 pb-6 pt-3 shadow-lg dark:border-mycolors-white max-lg:max-w-[30rem]`}
               >
                 {/* Popular Badge */}
                 {isPopular && (
@@ -105,7 +105,7 @@ const Pricing: FC<PricingProps> = ({ slice }) => {
                 </div>
 
                 {/* PLAN DETAILS */}
-                <div className="flex flex-col gap-y-2 border-t border-mycolors-white px-[18px] pt-9">
+                <div className="flex flex-col gap-y-2 border-t border-muted-foreground/50 px-[18px] pt-9 dark:border-mycolors-white">
                   <MyRichText
                     field={plan_details}
                     components={{

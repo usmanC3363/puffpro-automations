@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Arrow } from "@/components/helper/Arrow";
 import { cn } from "@/lib/utils";
 import { ScrollParagraphs } from "@/components/scroll-paragraphs";
+import { ContactButton } from "@/components/cta-buttons";
 
 /**
  * Props for `About`.
@@ -28,7 +29,7 @@ const About: FC<AboutProps> = ({ slice }) => {
       <h1 className="text-[60px] font-medium">{slice.primary.about_heading}</h1>
 
       {/* IMAGE AND DESCRIPTION GRID */}
-      <div className="relative grid h-full w-full gap-x-16 gap-y-14 lg:grid-cols-[33rem_auto] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
+      <div className="relative grid h-full w-full grid-cols-1 gap-x-16 gap-y-14 lg:grid-cols-[33rem_auto] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:py-20">
         <div
           className={`${slice.primary.isimageonleft ? "order-1" : "order-2"} flex h-full flex-col items-center`}
         >
@@ -66,14 +67,7 @@ const About: FC<AboutProps> = ({ slice }) => {
               ),
             }}
           />
-          <Button asChild variant="outline" className="w-fit">
-            <Link href="/">
-              <span className="pb-0.5 text-base font-normal">Contact Now</span>
-              <div className="flex items-center">
-                <Arrow svgClass="h-full w-full" name="main" />
-              </div>
-            </Link>
-          </Button>
+          <ContactButton />
         </div>
       </div>
     </Bounded>
@@ -85,7 +79,7 @@ const About: FC<AboutProps> = ({ slice }) => {
         "my-[6.5rem] flex h-full flex-col place-items-center justify-center",
       )}
     >
-      <div className="grid grid-cols-1 gap-y-4">
+      <div className="grid grid-cols-1 gap-y-8">
         {/* SECTION CONTENT */}
         <div className="flex flex-col gap-y-8">
           {/* SECTION TITLE with border */}

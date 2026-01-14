@@ -16,7 +16,10 @@ export function BookCallDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild className="group relative">
-        <Button className="max-w-fit rounded-full shadow-xl" variant="outline">
+        <Button
+          className="max-w-fit rounded-full bg-background shadow-xl"
+          variant="outline"
+        >
           <span className="absolute translate-x-0 scale-0 rounded border border-current bg-background px-2.5 py-px text-sm font-normal text-current opacity-0 transition-all duration-150 ease-linear group-hover:-translate-x-[5.5rem] group-hover:scale-100 group-hover:opacity-100">
             Book a Call
           </span>
@@ -25,14 +28,14 @@ export function BookCallDialog() {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-lg bg-[#101010]">
+      <DialogContent className="max-w-md bg-[#101010] md:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="ml-2 text-lg font-normal text-mycolors-white">
+          <DialogTitle className="ml-2.5 text-lg font-normal text-mycolors-white">
             Book a Call
           </DialogTitle>
         </DialogHeader>
 
-        <ContactForum />
+        <ContactForum label />
       </DialogContent>
     </Dialog>
   );
