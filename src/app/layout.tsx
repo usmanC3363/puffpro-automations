@@ -59,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="no-scrollbar" suppressHydrationWarning>
-      <body className={`${aeonik.className} `}>
+      <body className={`${aeonik.className}`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

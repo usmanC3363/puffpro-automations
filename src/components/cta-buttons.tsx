@@ -1,5 +1,8 @@
 import { ModeToggle } from "./helper/mode-toggle";
 import { BookCallDialog } from "./book-call-dialog";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { Arrow } from "./helper/Arrow";
 
 interface CtaButtonsProps {
   className?: string;
@@ -18,5 +21,18 @@ export const CtaButtons = ({ className }: CtaButtonsProps) => {
 
       <BookCallDialog />
     </div>
+  );
+};
+
+export const ContactButton = () => {
+  return (
+    <Button asChild variant="outline" className="w-fit">
+      <Link href="/">
+        <span className="pb-0.5 text-base font-normal">Contact Now</span>
+        <div className="flex items-center">
+          <Arrow svgClass="h-full w-full" name="main" />
+        </div>
+      </Link>
+    </Button>
   );
 };
