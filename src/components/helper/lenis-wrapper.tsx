@@ -9,12 +9,22 @@ export default function LenisWrapper({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+    const easeOutExpo = (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
+
     const lenis = new Lenis({
       autoRaf: true,
+
+      // Core smoothness
       smoothWheel: true,
+      lerp: 1, // 👈 inertia (try 0.06–0.1)
+      duration: 1, // 👈 how long scroll settles
+
+      // Wheel behavior
+      wheelMultiplier: 1.1,
+
+      // Feel
+      easing: easeOutExpo,
       anchors: true,
-      easing: easeOutCubic,
     });
 
     return () => {
