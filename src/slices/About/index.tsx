@@ -6,7 +6,7 @@ import Bounded from "@/components/helper/Bounded";
 import { MyRichText } from "@/components/helper/rich-text";
 import { cn } from "@/lib/utils";
 import { ScrollParagraphs } from "@/components/scroll-paragraphs";
-import { ContactButton } from "@/components/cta-buttons";
+import { BookCallDialog } from "@/components/book-call-dialog";
 
 /**
  * Props for `About`.
@@ -74,7 +74,7 @@ const About: FC<AboutProps> = ({ slice }) => {
               ),
             }}
           />
-          <ContactButton />
+          <BookCallDialog />
         </div>
       </div>
     </Bounded>

@@ -2,14 +2,12 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import Bounded from "@/components/helper/Bounded";
-import { Badge } from "@/components/ui/badge";
 import clsx from "clsx";
 import CSSLineReveal from "@/components/helper/CssLineReveal";
 import { MyRichText } from "@/components/helper/rich-text";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+
 import { Arrow } from "@/components/helper/Arrow";
-import { ContactButton } from "@/components/cta-buttons";
+import { BookCallDialog } from "@/components/book-call-dialog";
 
 /**
  * Props for `SectionContent`.
@@ -65,7 +63,7 @@ const SectionContent: FC<SectionContentProps> = ({ slice }) => {
               }}
             />
           )}
-          <ContactButton />
+          <BookCallDialog />
         </div>
       </div>
     </Bounded>
