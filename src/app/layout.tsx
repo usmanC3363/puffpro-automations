@@ -20,11 +20,11 @@ const aeonik = localFont({
       weight: "100",
       // style: "thin",
     },
-    {
-      path: "../../public/fonts/aeonik/Aeonik-Thin.woff2",
-      weight: "200",
-      // style: "light",
-    },
+    // {
+    //   path: "../../public/fonts/aeonik/Aeonik-Thin.woff2",
+    //   weight: "200",
+    //   // style: "light",
+    // },
     {
       path: "../../public/fonts/aeonik/Aeonik-Light.woff2",
       weight: "300",
