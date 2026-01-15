@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { GoArrowUpRight } from "react-icons/go";
 import CSSLineReveal from "@/components/helper/CssLineReveal";
 import { Arrow } from "@/components/helper/Arrow";
+import { BookCallDialog } from "@/components/book-call-dialog";
 
 /**
  * Props for `Hero`.
@@ -46,15 +47,8 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           </CSSLineReveal>
 
           {/* CTA Buttons */}
-          <div className="md-lg:flex-col md-lg:gap-y-6 md-lg:items-end flex gap-x-4 gap-y-9 justify-self-end lg:mt-6 max-xs:flex-col max-xs:items-end">
-            <Button asChild variant="outline" className="">
-              <PrismicNextLink field={slice.primary.cta1_link}>
-                <span className="pb-0.5 font-normal">
-                  {slice.primary.cta1_label}
-                </span>
-                <Arrow svgClass="h-full w-full" name="main" />
-              </PrismicNextLink>
-            </Button>
+          <div className="flex gap-x-4 gap-y-9 justify-self-end lg:mt-6 md-lg:flex-col md-lg:items-end md-lg:gap-y-6 max-xs:flex-col max-xs:items-end">
+            <BookCallDialog />
 
             <Button variant="outline" asChild>
               <PrismicNextLink field={slice.primary.cta2_link}>

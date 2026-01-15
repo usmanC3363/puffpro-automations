@@ -8,9 +8,7 @@ import clsx from "clsx";
 import CSSLineReveal from "@/components/helper/CssLineReveal";
 import { MyRichText } from "@/components/helper/RichText";
 import { Arrow } from "@/components/helper/Arrow";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { ContactButton } from "@/components/cta-buttons";
+import { BookCallDialog } from "@/components/book-call-dialog";
 
 /**
  * Props for `Services`.
@@ -73,7 +71,7 @@ const Services: FC<ServicesProps> = ({ slice }) => {
                       ),
                     }}
                   />
-                  <ContactButton />
+                  <BookCallDialog />
                 </div>
               </div>
               {/* SERVICE IMAGE */}
