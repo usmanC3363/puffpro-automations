@@ -46,7 +46,7 @@ export const EachCharacter = ({
       ? COLORS.white
       : COLORS.black;
 
-  const animatedColor = useTransform(progress, (v) => {
+  const animatedColor = useTransform(progress, (v: number) => {
     if (charIndex < transitionStartIndex) {
       return startColor;
     }
